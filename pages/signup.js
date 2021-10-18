@@ -13,17 +13,17 @@ function signup() {
             <div className="flex flex-col justify-center items-center mt-10 max-w-xs md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto ">
                 <div className="flex flex-col justify-center items-center w-full">
                     <div className="relative justify-center items-center w-full">
-                        <div className="absolute text-xs text-porabay bg-white ml-3">Name</div>
+                        <div className="absolute text-xs justify-center items-center text-porabay bg-white ml-3 p-1 -mt-1">Name</div>
                         <input type="text" placeholder="Enter Name"  className="border-2 border-porabay my-2 p-2 rounded-md focus:border-black w-full" />
                     </div>
                     
                     <div className="relative justify-center items-center w-full">
-                        <div className="absolute text-xs text-porabay bg-white ml-3">Contact</div>
+                        <div className="absolute text-xs text-porabay bg-white ml-3 p-1 -mt-1">Contact</div>
                         <input type="text" placeholder="Enter Contact no." className="border-2 border-porabay my-2 p-2 rounded-md focus:border-black w-full" />
                     </div>
 
                     <div className="arelative justify-center items-center w-full">
-                        <div className="absolute text-xs text-porabay bg-white ml-3">Address</div>
+                        <div className="absolute text-xs text-porabay bg-white ml-3 p-1 -mt-1">Address</div>
                         <input type="text" placeholder="Enter complete Address" className="border-2 border-porabay my-2 p-2 rounded-md focus:border-black w-full" />
                     </div>               
                 </div>

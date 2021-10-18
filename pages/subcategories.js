@@ -1,8 +1,21 @@
+import Diwali from "./components/Diwali"
+import Footer from "./components/Footer"
+import Header from "./components/Header"
+
 function subcategories() {
     return (
-        <div>
-            Congo !! u entered a new page
-            U will see All products of that category under respective sub Categories
+        <div> 
+            <Header/>
+            <div className="flex p-3">
+                <p>Category Name</p>
+            </div>
+            <Diwali/>
+            <Diwali/>
+            <Diwali/>
+            <Diwali/>
+            <Diwali/>
+            <Diwali/>
+            <Footer/>
         </div>
     )
 }
