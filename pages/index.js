@@ -15,31 +15,32 @@ export default function Home() {
         <link rel="icon" href="/porabay-logo.jpg" />
       </Head>
       <Header/>
-      <About/>
-      <ProductsNear/>
-      <div className="m-2 mt-3">
-        <p>Explore Categories...</p>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 mt-2"> 
-          <Category/>
-          <Category/>
-          <Category/>
-          <Category/>
-          <Category/>
-          <Category/>
+        <About/>
+        <ProductsNear/>
+        <div className="m-2 mt-3">
+          <p>Explore Categories...</p>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 mt-2"> 
+            <Category/>
+            <Category/>
+            <Category/>
+            <Category/>
+            <Category/>
+            <Category/>
+          </div>
         </div>
-      </div>
-      <div className="flex flex-col m-2">
-        <p>Diwali Special...</p>
-        <div className="flex flex-col justify-center items-center mt-2">
-          <Diwali/>
-          <Diwali/>
-          <Diwali/>
-          <Diwali/>
+        <div className="flex flex-col m-2">
+          <p>Diwali Special...</p>
+          <div className="flex flex-col justify-center items-center mt-2">
+            <Diwali/>
+            <Diwali/>
+            <Diwali/>
+            <Diwali/>
+          </div>
         </div>
-      </div>
-      <div>
-        <Footer/>
-      </div>
+        <div>
+          <Footer/>
+        </div>
+      
     </div>
   )
 }

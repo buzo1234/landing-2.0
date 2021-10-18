@@ -15,7 +15,6 @@ function Diwali() {
                     <ProductIcon/>
                     <ProductIcon/>
                     <ProductIcon/>
-                    <ProductIcon/>
                 </div>
             </div>
         </div>
