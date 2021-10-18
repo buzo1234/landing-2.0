@@ -3,8 +3,8 @@ import Image from 'next/image';
 function ProductIcon() {
     return (
         <div className="flex justify-center items-center m-[0.5] rounded-lg hover:bg-gray-100">
-            <div className="flex justify-center items-center m-1 border-2 border-porabay rounded-2xl bg-white">
-                <div className="flex justify-center items-center p-1 rounded-2xl w-14 md:w-16 lg:w-20 xl:w-24">
+            <div className="flex flex-col justify-center items-center m-1 border-2 border-porabay rounded-2xl bg-white">
+                <div className="flex justify-center items-center p-1 rounded-2xl w-16 md:w-20 lg:w-24 xl:w-28">
                     <Image
                         src="/porabay-logo.jpg"
                         width={100}
@@ -12,6 +12,7 @@ function ProductIcon() {
                         objectFit="contain"
                     />
                 </div>
+                <div className="flex justify-center items-center text-center m-1 border border-purple-400 rounded-md"><p>Product Description</p></div>
             </div>
         </div>
         

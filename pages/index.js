@@ -9,7 +9,7 @@ import ProductsNear from './components/ProductsNear'
 
 export default function Home() {
   return (
-    <div>
+    <div className="flex flex-col">
       <Head>
         <title>Porabay</title>
         <link rel="icon" href="/porabay-logo.jpg" />
@@ -19,9 +19,7 @@ export default function Home() {
         <ProductsNear/>
         <div className="m-2 mt-3">
           <p>Explore Categories...</p>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 mt-2"> 
-            <Category/>
-            <Category/>
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 mt-2"> 
             <Category/>
             <Category/>
             <Category/>
