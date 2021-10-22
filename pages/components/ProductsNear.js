@@ -73,7 +73,7 @@ function ProductsNear() {
                 slidesToSlide={2}
             >
                 {sellers.map((seller) => {
-                  return <ProdIcon seller={seller} key={seller._id} />
+                  return <ProdIcon {...seller} key={seller._id} />
                 })}
             </Carousel>
         </div>
