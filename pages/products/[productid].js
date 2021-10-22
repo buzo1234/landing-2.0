@@ -17,7 +17,7 @@ function product() {
         const router = useRouter()
         const productid = router.query.productid
         useEffect(()=>{
-            axios.get(`http://localhost:5000/sellers/${productid}`)
+            axios.get(`https://karanmahesh.herokuapp.com/${productid}`)
             .then(response => {
                 dispatch({
                     type:"GET_SELLER_DETAILS",

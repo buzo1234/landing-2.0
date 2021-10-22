@@ -13,7 +13,7 @@ function ProductsNear() {
     } = CartState();
    
     useEffect(() => {
-      axios.get('http://localhost:5000/sellers')
+      axios.get('https://karanmahesh.herokuapp.com/sellers')
       .then(response => {
         if(response.data.length > 0) {
           dispatch({
