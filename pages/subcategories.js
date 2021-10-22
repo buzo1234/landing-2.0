@@ -6,16 +6,25 @@ function subcategories() {
     return (
         <div> 
             <Header/>
+            <div className="flex justify-between items-center overflow-x-scroll w-full  my-2 ">
+                
+                <div className="flex justify-center items-center p-2 mx-1 rounded-md cursor-pointer bg-porabay text-white font-bold min-w-max text-sm">Category 1</div>
+                <div className="flex justify-center items-center p-2 mx-1 rounded-md cursor-pointer bg-porabay text-white font-bold min-w-max text-sm">Category 1</div>
+                <div className="flex justify-center items-center p-2 mx-1 rounded-md cursor-pointer bg-porabay text-white font-bold min-w-max text-sm">Category 1</div>
+                <div className="flex justify-center items-center p-2 mx-1 rounded-md cursor-pointer bg-porabay text-white font-bold min-w-max text-sm">Category 1</div>
+                <div className="flex justify-center items-center p-2 mx-1 rounded-md cursor-pointer bg-porabay text-white font-bold min-w-max text-sm">Category 1</div>
+            </div>  
             <div className="flex p-3">
                 <p>Category Name</p>
             </div>
-            <Diwali/>
-            <Diwali/>
-            <Diwali/>
-            <Diwali/>
-            <Diwali/>
-            <Diwali/>
-            <Footer/>
+            <div className="flex flex-col justify-center items-center mt-2">
+                <Diwali/>
+                <Diwali/>
+                <Diwali/>
+                
+            </div>
+            <div><Footer/></div>
+            
         </div>
     )
 }

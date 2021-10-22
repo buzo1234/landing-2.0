@@ -16,23 +16,26 @@ function Banner() {
             >
                 <div>
                     <Image 
-                        src="/porabay-logo.jpg"
-                        height={200}
-                        width={200}
+                        src="https://res.cloudinary.com/dcyaz9xch/image/upload/v1634882936/kk6f00xstpz4dbntjguv.jpg"
+                        height={250}
+                        width={250}
+                        objectFit='contain'
                     />
                 </div>
                 <div>
                     <Image 
-                        src="/porabay-logo.jpg"
-                        height={200}
-                        width={200}
+                        src="https://res.cloudinary.com/dcyaz9xch/image/upload/v1634888453/dqdaappqznbc8qdxpnqd.jpg"
+                        height={250}
+                        width={250}
+                        objectFit='contain'
                     />
                 </div>
                 <div>
                     <Image 
-                        src="/porabay-logo.jpg"
-                        height={200}
-                        width={200}
+                        src="https://res.cloudinary.com/dcyaz9xch/image/upload/v1634888528/ku9uhgzcy5pkcj83fzaa.jpg"
+                        height={250}
+                        width={250}
+                        objectFit='contain'
                     />
                 </div>
             </Carousel>

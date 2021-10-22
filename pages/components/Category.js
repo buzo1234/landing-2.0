@@ -12,6 +12,7 @@ function Category() {
                             width={150}
                             height={150}
                         />
+                        <p className="text-center">Cat Name</p>
                     </div>
                 </div>
             </Link>

@@ -26,12 +26,9 @@ export default function Home() {
             <Category/>
           </div>
         </div>
-        <Banner/>
         <div className="flex flex-col m-2">
           <p>Diwali Special...</p>
           <div className="flex flex-col justify-center items-center mt-2">
-            <Diwali/>
-            <Diwali/>
             <Diwali/>
             <Diwali/>
           </div>
