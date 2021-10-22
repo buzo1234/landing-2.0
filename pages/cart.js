@@ -18,7 +18,7 @@ const cart = () => {
                <CartItem/>
            </div>
            <div className="flex flex-col justify-center items-center m-4 mt-5">
-               <p><b>SubTotal:</b> price</p>
+               <p className="text-lg"><b>SubTotal: </b>₹ price</p>
                <Link href="/checkout">
                     <div className="flex justify-center items-center m-4 py-3 px-10 text-porabay border-2 border-porabay rounded-3xl cursor-pointer hover:text-white hover:bg-porabay hover:underline hover:border-black font-bold text-lg">
                         <p>Proceed To Checkout</p>

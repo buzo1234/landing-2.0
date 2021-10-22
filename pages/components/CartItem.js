@@ -17,7 +17,7 @@ function CartItem() {
                 <div className="flex col-span-2">
                     <div className="mx-3">
                         <Link href="/product"><p className="font-bold cursor-pointer ">Product Name</p></Link>
-                        <p>Price: price</p>
+                        <p>Price: ₹ price</p>
                         <label>Qty:</label>
                         <select name="qty" id="" className="mx-3">
                             <option value="1">1</option>
@@ -32,7 +32,7 @@ function CartItem() {
                             <option value="10">10</option>
                         </select>
                         
-                        <TrashIcon className="w-6 border-2 hover:border-black rounded-md hover:bg-red-500 hover:text-white m-2"/>
+                        <TrashIcon className="w-6 border-2 border-red-800 hover:border-black rounded-md hover:bg-red-500 hover:text-white m-2"/>
                         
                     </div>
                 </div>

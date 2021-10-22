@@ -16,8 +16,8 @@ function Header() {
                 <div className="flex items-center space-x-4">
                     <Link href="/cart">
                         <div className="relative w-full cursor-pointer">
-                            <div className="absolute -mt-2 ml-3 justify-center bg-red-500 items-center text-xs text-center rounded-full w-4">0</div>
-                            <ShoppingCartIcon className="w-6"/>
+                            <div className="absolute -mt-2 ml-5 justify-center bg-red-400 items-center text-xs text-center rounded-full w-4">0</div>
+                            <ShoppingCartIcon className="w-8"/>
                         </div>
                     </Link>
                     <Link href="/signup">

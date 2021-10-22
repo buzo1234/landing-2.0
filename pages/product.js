@@ -14,8 +14,8 @@ function product() {
                 <Banner/>
                 <Seller/>
                 <div className="flex flex-col justify-center w-full">
+                    <div className="flex justify-center items-center p-2 "><p><b>Price: </b>₹ Price</p></div>
                     <div className="flex justify-center items-center p-2 ">Produt Name</div>
-                    <div className="flex justify-center items-center p-2 "><b>Price: </b> Price</div>
                     <p className="flex mx-3 text-center text-sm ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, harum rem, sunt praesentium qui ex, officia obcaecati ipsum doloribus quisquam deleniti sed maxime ab iusto iste nobis est blanditiis. Ad!</p>
                 </div>
             </div>

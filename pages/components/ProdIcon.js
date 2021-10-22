@@ -1,14 +1,33 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import {useEffect, useState} from 'react';
+import { CartState } from '../../context/AppContext';
 
-function ProdIcon() {
+function ProdIcon({seller}) {
+
+    const {
+        state: {sellerdata},
+        dispatch,   
+    } = CartState();
+    
+
+    const [imgurl, setImgurl] = useState('/user.png');
+    useEffect(() => {
+        if(seller.profilepic !== ""){
+            setImgurl(seller.profilepic);
+        }
+    },[]);
+
+    
     return (
-        <Link href="/product">
-            <div className="flex justify-center items-center m-2 p-3 border-2 border-porabay rounded-full transition duration-200 ease-in-out transform hover:scale-110 cursor-pointer">
+        <Link href={`/products/${seller._id}`}>
+            <div className="flex justify-center mx-1 p-1 border-2 border-porabay rounded-full transition duration-200 ease-in-out transform hover:scale-110 cursor-pointer my-3 ">
                 <Image
-                    src="/porabay-logo.jpg"
-                    height={60}
-                    width={60}
+                    src={imgurl}
+                    height={100}
+                    width={100}
+                    objectFit='contain'
+                    className="rounded-full"
                 />         
             </div>
         </Link>

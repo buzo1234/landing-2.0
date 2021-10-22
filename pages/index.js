@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import About from './components/About'
-import Banner from './components/Banner'
 import Category from './components/Category'
 import Diwali from './components/Diwali'
 import Footer from './components/Footer'
