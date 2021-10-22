@@ -8,15 +8,10 @@ import { CartState } from '../../context/AppContext';
 function ProductsNear() {
 
     const {
-        state: {sellers, sellerdata},
+        state: {sellers},
         dispatch,
     } = CartState();
-    if(sellerdata === {}){
-      console.log("Finally a breath");
-    }
-    else{
-      console.log(sellerdata)
-    }
+   
     useEffect(() => {
       axios.get('http://localhost:5000/sellers')
       .then(response => {
@@ -34,10 +29,7 @@ function ProductsNear() {
             type:"GET_SELLERS",
             payload: response.data,
           })
-          dispatch({
-            type:"GET_PRODUCTS",
-            payload:response.data
-        })
+          
         }
       })
       .catch((err) => {

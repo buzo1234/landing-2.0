@@ -1,15 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import {useEffect, useState} from 'react';
-import { CartState } from '../../context/AppContext';
 
 function ProdIcon({seller}) {
-
-    const {
-        state: {sellerdata},
-        dispatch,   
-    } = CartState();
-    
 
     const [imgurl, setImgurl] = useState('/user.png');
     useEffect(() => {
