@@ -70,7 +70,8 @@ function ProductsNear() {
                 removeArrowOnDeviceType={["desktop","tablet","mobile","superLargeDesktop"]}
                 responsive={responsive}
                 centerMode
-                slidesToSlide={2}
+                slidesToSlide={1}
+                minimumTouchDrag={25}
             >
                 {loading ? <h1 className="font-bold">Loading...</h1> :products.map((product) => {
                   return <ProdIcon {...product} key={product._id} />
