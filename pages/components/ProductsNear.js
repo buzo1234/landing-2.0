@@ -30,7 +30,6 @@ function ProductsNear() {
             type:"GET_PRODUCTS",
             payload: response.data,
           })
-          console.log(products)
         }
       })
       .catch((err) => {

@@ -11,7 +11,7 @@ import {useRouter} from 'next/router';
 import {useEffect} from 'react';
 
 function product() {
-    const {state : {productdata}, dispatch,} = CartState();
+    const {state : {productdata, loading}, dispatch,} = CartState();
 
     
     const router = useRouter();
@@ -20,8 +20,8 @@ function product() {
     useEffect(()=>{
         dispatch({
             type:"GET_PRODUCT_REQUEST"
-        })
-        axios.get(`https://karanmahesh.herokuapp.com/products/${productid}`)
+        });
+        axios.get(`http://localhost:5000/products/${productid}`)
         .then(response => {
             dispatch({
                 type:"GET_PRODUCT_DETAILS",
@@ -33,13 +33,20 @@ function product() {
         })
     },[router]);
 
+    
+    var name = ((productdata || {}).sellerid || {}).sellername;
+    var pic = ((productdata || {}).sellerid || {}).profilepic;
+
+    if(pic==="") pic='/user.png'
+
     return (
+        
         <div className="flex flex-col">
             <Header/>
-            
+            {loading ? (<h1>Loading...</h1>) : (<>
             <div className="flex flex-col justify-center">
-                <Banner productimg={productdata.productimg} key={productdata.contact}/>
-                <Seller {...productdata} key={productdata._id}/>
+                <Banner productimg={productdata.productimg} key={productdata.productname}/>
+                <Seller name={name} pic={pic} key={productdata._id}/>
                 <div className="flex flex-col justify-center w-full">
                     <div className="flex justify-center items-center p-2 "><p><b>Price: </b>₹ {productdata.productprice}</p></div>
                     <div className="flex justify-center items-center p-2 font-bold ">{productdata.productname}</div>
@@ -57,7 +64,7 @@ function product() {
             </Link>
             </div>
             
-            
+            </>)}
             <Footer/>
             
             

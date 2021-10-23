@@ -2,61 +2,49 @@ import { useEffect, useState } from "react"
 import { CartState } from "../../context/AppContext";
 import axios from "axios";
 
-function Seller({sellerid}) {
+function Seller({name,pic}) {
     const {
-        state: {sellerdata, loading},
+        state: { loading},
         dispatch,
     } = CartState();
-
-    const [imgurl, setImgurl] = useState();
-
-    console.log("khatam")
-
+    console.log('lag gaye')
+    /*
     useEffect(() => {
-        dispatch({
-            type:"GET_SELLER_REQUEST"
-          });
-        axios.get(`https://karanmahesh.herokuapp.com/sellers/${sellerid}`)
-        .then(response => {
-          if(response.data) {
-            
+      const sendGetRequest = async () => {
+        
+        try {
+            dispatch({
+              type:"GET_SELLER_REQUEST"
+            });
+            console.log('wtf')
+            const resp = await axios.get(`https://karanmahesh.herokuapp.com/sellers/${sellerid}`);
             dispatch({
               type:"GET_SELLER_DETAILS",
-              payload: response.data,
-            })
-          }
-          else{
-              console.log(response)
-          }
-        })
-        .catch((err) => {
-          console.log(err)
-        })
-    },[sellerid])
-
-    useEffect(() => {
-        if(sellerdata.profilepic !== ""){
-            setImgurl(sellerdata.profilepic);
+              payload: resp.data
+            });
+        } catch (err) {
+            console.error(err);
         }
-        else{
-            setImgurl("/user.png");
-        }
-        console.log("idhar bhi")
-    },[])
+      };
+      sendGetRequest();
+    }
+    ,[router])
+    */
 
     return (
-        <div className="flex justify-start items-center m-2 p-1 rounded-md cursor-pointer hover:bg-gray-100 lg:justify-center xl:justify-center">
-            {loading? 
-            <h1 className="font-bold">Loading...</h1>
-            :
-            <>
-            <img src={imgurl} alt="propfilepic" className="w-8 h-8 object-contain rounded-full" />
-            <span className="mx-2 text-sm text-gray-400 italic"><b>Made By : </b>{sellerdata.sellername}</span>
-            <span className=" justify-end text-xs text-gray-400 italic">--see other products</span>
-            </>
-            }
+        loading ? (<h1>Loading...</h1>) : (
+          <>
+            <div className="flex justify-start items-center m-2 p-1 rounded-md cursor-pointer hover:bg-gray-100 lg:justify-center xl:justify-center">
+              
+              <img src={pic} alt="propfilepic" className="w-8 h-8 object-contain rounded-full" />
+              <span className="mx-2 text-sm text-gray-400 italic"><b>Made By : </b>{name}</span>
+              <span className=" justify-end text-xs text-gray-400 italic">--see other products</span>
             
-        </div>
+              
+          </div>
+          </>
+        )
+        
     )
 }
 

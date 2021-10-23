@@ -17,7 +17,6 @@ function ProdIcon({productimg, _id, sellerid}) {
             setImgurl(productimg[0]);
         }
     },[products]);
-    console.log(sellerid)
     return (
         <div>
 

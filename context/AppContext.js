@@ -10,7 +10,7 @@ export function AppWrapper({ children }) {
     return {state, dispatch};
   }, [state, dispatch]);
 
-  
+  /*
   useEffect(() => {
     if (JSON.parse(localStorage.getItem("state"))) { 
       //checking if there already is a state in localstorage
@@ -27,7 +27,7 @@ export function AppWrapper({ children }) {
       localStorage.setItem("state", JSON.stringify(state)); 
       //create and/or set a new localstorage variable called "state"
     }
-  }, [state]);
+  }, [state]);*/
 
 
   return (
