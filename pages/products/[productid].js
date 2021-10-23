@@ -31,7 +31,7 @@ function product() {
         }).catch((err) => {
             console.log(err)
         })
-    },[]);
+    },[router]);
 
     return (
         <div className="flex flex-col">

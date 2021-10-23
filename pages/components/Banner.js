@@ -2,13 +2,20 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import {Carousel} from 'react-responsive-carousel'
 import Image from 'next/image'
 import { CartState } from "../../context/AppContext";
+import { useState, useEffect } from "react";
 
 function Banner({productimg}) {
 
     const {
         state: {loading}
     } = CartState();
-    
+    const [imgurl, setImgurl] = useState(['/prod_default.png']);
+
+    useEffect(() => {
+        if(productimg!==undefined){
+            setImgurl(productimg);
+        }
+    })
     return (
         !loading ? (
         <div className="relative mt-5 max-w-6xl mx-auto">
@@ -23,7 +30,7 @@ function Banner({productimg}) {
                 emulateTouch={true}
             >     
 
-                    {productimg.map((prodimg) => (
+                    {imgurl.map((prodimg) => (
                         <div>
                             <Image 
                                 src={prodimg}
