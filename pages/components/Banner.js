@@ -4,11 +4,14 @@ import Image from 'next/image'
 import { useState, useEffect } from "react";
 
 function Banner({profilepic}) {
-    const [imgpic,setImg] = useState("/user.png");
+    const [imgpic,setImg] = useState();
 
     useEffect(() => {
         if(profilepic !== ""){
             setImg(profilepic);
+        }
+        else{
+            setImg("/user.png")
         }
     },[]);
 
