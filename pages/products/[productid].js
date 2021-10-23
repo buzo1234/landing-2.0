@@ -38,7 +38,7 @@ function product() {
             <Header/>
             
             <div className="flex flex-col justify-center">
-                <Banner {...productdata} key={productdata.contact}/>
+                <Banner productimg={productdata.productimg} key={productdata.contact}/>
                 <Seller {...productdata} key={productdata._id}/>
                 <div className="flex flex-col justify-center w-full">
                     <div className="flex justify-center items-center p-2 "><p><b>Price: </b>₹ {productdata.productprice}</p></div>
