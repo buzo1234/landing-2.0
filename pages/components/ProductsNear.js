@@ -8,17 +8,18 @@ import { CartState } from '../../context/AppContext';
 function ProductsNear() {
 
     const {
-        state: {sellers, loading},
+        state: {products, loading},
         dispatch,
     } = CartState();
    
     useEffect(() => {
-      axios.get('https://karanmahesh.herokuapp.com/sellers')
+      dispatch({
+        type:"GET_PRODUCTS_REQUEST"
+      });
+      axios.get('https://karanmahesh.herokuapp.com/products')
       .then(response => {
         if(response.data.length > 0) {
-          dispatch({
-            type:"GET_SELLERS_REQUEST"
-          });
+          
           /*for(let i=0; i<response.data.length; i++){
             dispatch({
               type:"GET_SELLER",
@@ -26,10 +27,10 @@ function ProductsNear() {
             })
           }*/
           dispatch({
-            type:"GET_SELLERS",
+            type:"GET_PRODUCTS",
             payload: response.data,
           })
-          
+          console.log(products)
         }
       })
       .catch((err) => {
@@ -72,8 +73,8 @@ function ProductsNear() {
                 centerMode
                 slidesToSlide={2}
             >
-                {loading ? <h1 className="font-bold">Loading...</h1> :sellers.map((seller) => {
-                  return <ProdIcon {...seller} key={seller._id} />
+                {loading ? <h1 className="font-bold">Loading...</h1> :products.map((product) => {
+                  return <ProdIcon {...product} key={product._id} />
                 })}
             </Carousel>
         </div>

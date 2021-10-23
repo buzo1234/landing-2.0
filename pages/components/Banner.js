@@ -1,21 +1,9 @@
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import {Carousel} from 'react-responsive-carousel'
 import Image from 'next/image'
-import { useState, useEffect } from "react";
 
-function Banner({profilepic}) {
-    const [imgpic,setImg] = useState();
-
-    useEffect(() => {
-        if(profilepic !== ""){
-            setImg(profilepic);
-        }
-        else{
-            setImg("/user.png")
-        }
-    },[]);
-
-
+function Banner({productimg}) {
+    
     return (
         <div className="relative mt-5 max-w-6xl mx-auto">
            
@@ -28,14 +16,21 @@ function Banner({profilepic}) {
                 interval={3000}
                 emulateTouch={true}
             >
-                <div>
-                    <Image 
-                        src={imgpic}
-                        height={250}
-                        width={250}
-                        objectFit='contain'
-                    />
-                </div>
+                
+                    
+
+                    {productimg.map((prodimg) => (
+                        <div>
+                            <Image 
+                                src={prodimg}
+                                height={250}
+                                width={250}
+                                objectFit='contain'
+                            />   
+                        </div>
+                        
+                    ))}
+                
                 
             </Carousel>
             
