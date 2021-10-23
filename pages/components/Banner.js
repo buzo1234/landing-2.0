@@ -1,10 +1,16 @@
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import {Carousel} from 'react-responsive-carousel'
 import Image from 'next/image'
+import { CartState } from "../../context/AppContext";
 
 function Banner({productimg}) {
+
+    const {
+        state: {loading}
+    } = CartState();
     
     return (
+        !loading ? (
         <div className="relative mt-5 max-w-6xl mx-auto">
            
             <Carousel
@@ -15,9 +21,7 @@ function Banner({productimg}) {
                 showThumbs={false}
                 interval={3000}
                 emulateTouch={true}
-            >
-                
-                    
+            >     
 
                     {productimg.map((prodimg) => (
                         <div>
@@ -35,6 +39,7 @@ function Banner({productimg}) {
             </Carousel>
             
         </div>
+        ) : (<h1>Loading...</h1>)
     )
 }
 
