@@ -9,9 +9,9 @@ export function AppWrapper({ children }) {
   const contextValue = useMemo(() => {
     return {state, dispatch};
   }, [state, dispatch]);
-/*
+
   useEffect(() => {
-    if (state !== initialState) {
+    if (state !== undefined) {
       localStorage.setItem("state", JSON.stringify(state)); 
       //create and/or set a new localstorage variable called "state"
     }
@@ -28,7 +28,7 @@ export function AppWrapper({ children }) {
     }
   }, []);
 
-*/ 
+
 
   return (
     <Cart.Provider value={contextValue}>{children}</Cart.Provider>

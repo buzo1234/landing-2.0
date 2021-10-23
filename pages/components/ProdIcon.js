@@ -5,6 +5,7 @@ import {useEffect, useState} from 'react';
 function ProdIcon({profilepic, _id}) {
 
     const [imgurl, setImgurl] = useState('/user.png');
+    
     useEffect(() => {
         if(profilepic !== ""){
             setImgurl(profilepic);
