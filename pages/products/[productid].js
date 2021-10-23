@@ -21,7 +21,7 @@ function product() {
         dispatch({
             type:"GET_PRODUCT_REQUEST"
         });
-        axios.get(`http://localhost:5000/products/${productid}`)
+        axios.get(`https://karanmahesh.herokuapp.com/products/${productid}`)
         .then(response => {
             dispatch({
                 type:"GET_PRODUCT_DETAILS",
