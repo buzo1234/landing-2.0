@@ -11,12 +11,15 @@ import {useRouter} from 'next/router';
 import {useEffect} from 'react';
 
 function product() {
-    const {state : {sellerdata}, dispatch,} = CartState();
+    const {state : {sellerdata, loading}, dispatch,} = CartState();
     
     function producthandler() {
         const router = useRouter()
         const productid = router.query.productid
         useEffect(()=>{
+            dispatch({
+                type:"GET_SELLER_REQUEST"
+            })
             axios.get(`https://karanmahesh.herokuapp.com/sellers/${productid}`)
             .then(response => {
                 dispatch({
@@ -27,7 +30,7 @@ function product() {
             }).catch((err) => {
                 console.log(err)
             })
-        },[]);
+        },[dispatch,router]);
     }
 
     producthandler();
@@ -35,13 +38,15 @@ function product() {
     return (
         <div className="flex flex-col">
             <Header/>
+            {loading ? <h1 className="font-bold">Loading....</h1> : 
+            <>
             <div className="flex flex-col justify-center">
-                <Banner/>
-                <Seller/>
+                <Banner {...sellerdata} key={sellerdata.contact}/>
+                <Seller {...sellerdata} key={sellerdata._id}/>
                 <div className="flex flex-col justify-center w-full">
                     <div className="flex justify-center items-center p-2 "><p><b>Price: </b>₹ {sellerdata.contact}</p></div>
                     <div className="flex justify-center items-center p-2 ">{sellerdata.name}</div>
-                    <p className="flex mx-3 text-center text-sm ">{sellerdata.address}</p>
+                    <p className="flex justify-center mx-3 text-center text-sm  ">{sellerdata.address}</p>
                 </div>
             </div>
             <div className="flex justify-center items-center">
@@ -54,7 +59,8 @@ function product() {
                 </div>
             </Link>
             </div>
-            
+            </>
+            }
             <Footer/>
             
             

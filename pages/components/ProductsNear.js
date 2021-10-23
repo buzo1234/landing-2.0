@@ -8,7 +8,7 @@ import { CartState } from '../../context/AppContext';
 function ProductsNear() {
 
     const {
-        state: {sellers},
+        state: {sellers, loading},
         dispatch,
     } = CartState();
    
@@ -72,7 +72,7 @@ function ProductsNear() {
                 centerMode
                 slidesToSlide={2}
             >
-                {sellers.map((seller) => {
+                {loading ? <h1 className="font-bold">Loading...</h1> :sellers.map((seller) => {
                   return <ProdIcon {...seller} key={seller._id} />
                 })}
             </Carousel>

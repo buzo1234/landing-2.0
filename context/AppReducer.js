@@ -12,18 +12,27 @@ export const AppReducer = (state, action) => {
 
         case "GET_SELLERS_REQUEST":
             return {
-                ...state, sellers:[]
+                ...state,
+                loading: true,
+                sellers:[]
             };
 
         case "GET_SELLERS":
             return{
                 ...state,
+                loading: false,
                 sellers:action.payload
             };
 
+        case "GET_SELLER_REQUEST" :
+            return{
+                ...state,
+                loading:true,
+            }
         case "GET_SELLER_DETAILS":
             return{
                 ...state,
+                loading: false,
                 sellerdata: action.payload
             }
         
