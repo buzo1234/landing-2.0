@@ -9,7 +9,6 @@ function CartItem({p_img, p_id, p_name, p_price, p_qty, removeHandler}) {
     const productrouter =(id) => [
         Router.push(`/products/${id}`)
     ]
-    console.log(item.qty)
     return (
         <div>
             <div className="grid grid-cols-3 bg-gray-100 rounded-xl p-2 my-2">
