@@ -6,7 +6,7 @@ function subcategories() {
     return (
         <div> 
             <Header/>
-            <div className="flex justify-between items-center overflow-x-scroll w-full  my-2 ">
+            <div className="flex justify-between items-center overflow-x-scroll w-full  my-2 p-2">
                 
                 <div className="flex justify-center items-center p-2 mx-1 rounded-md cursor-pointer bg-porabay text-white font-bold min-w-max text-sm">Category 1</div>
                 <div className="flex justify-center items-center p-2 mx-1 rounded-md cursor-pointer bg-porabay text-white font-bold min-w-max text-sm">Category 1</div>

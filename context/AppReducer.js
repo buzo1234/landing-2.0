@@ -1,15 +1,17 @@
+export const initialstate = {
+    products : [],
+    sellers: [],
+    sellerdata: {},
+    loading: false,
+    productdata : {}
+
+}
+
 export const AppReducer = (state, action) => {
     switch (action.type) {
         case "init_stored": {
             return action.value;
         }
-        case "ADD_TO_CART":
-            return {...state, cart:[...state.cart, {...action.payload, qty:1}]};
-
-        case "REMOVE_FROM_CART":
-            return {...state, cart:state.cart.filter(c => c.id !== action.payload.id)};
-
-
         case "GET_SELLERS_REQUEST":
             return {
                 ...state,

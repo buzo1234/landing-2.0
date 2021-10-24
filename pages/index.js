@@ -7,6 +7,7 @@ import Header from './components/Header'
 import ProductsNear from './components/ProductsNear'
 
 export default function Home() {
+
   return (
     <div className="flex flex-col">
       <Head>

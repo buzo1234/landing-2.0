@@ -7,29 +7,6 @@ function Seller({name,pic}) {
         state: { loading},
         dispatch,
     } = CartState();
-    console.log('lag gaye')
-    /*
-    useEffect(() => {
-      const sendGetRequest = async () => {
-        
-        try {
-            dispatch({
-              type:"GET_SELLER_REQUEST"
-            });
-            console.log('wtf')
-            const resp = await axios.get(`https://karanmahesh.herokuapp.com/sellers/${sellerid}`);
-            dispatch({
-              type:"GET_SELLER_DETAILS",
-              payload: resp.data
-            });
-        } catch (err) {
-            console.error(err);
-        }
-      };
-      sendGetRequest();
-    }
-    ,[router])
-    */
 
     return (
         loading ? (<h1>Loading...</h1>) : (
