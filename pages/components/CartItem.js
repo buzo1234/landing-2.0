@@ -39,7 +39,7 @@ function CartItem({p_img, p_id, p_name, p_price, p_qty, removeHandler}) {
                                 ))}
                         </select>
                         
-                        <TrashIcon className="w-6 border-2 border-red-800 hover:border-black rounded-md hover:bg-red-500 hover:text-white m-2" onClick={() => removeHandler(item.p_id)}/>
+                        <TrashIcon className="w-6 border-2 border-red-800 hover:border-black rounded-md hover:bg-red-500 hover:text-white m-2" onClick={() => removeHandler(p_id)}/>
                         
                     </div>
                 </div>
