@@ -24,7 +24,7 @@ function CartItem({p_img, p_id, p_name, p_price, p_qty, removeHandler}) {
                 <div className="flex col-span-2">
                     <div className="mx-3">
                         <p className="font-bold cursor-pointer " onClick={() => productrouter(p_id)}>{p_name}</p>
-                        <p>Price: ₹ {item.p_price}</p>
+                        <p>Price: ₹ {p_price}</p>
                         <label>Qty:</label>
                         <select name="qty" id="" className="mx-3" value={p_qty} onChange={(e) => cartdispatch({
                             type:"CHANGE_CART_QTY",
