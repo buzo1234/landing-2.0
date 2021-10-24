@@ -53,7 +53,7 @@ const cartarea = () => {
                         Your Cart is empty
                     </div>
                 ) : cartstate.cart.map(item => (
-                    <CartItem key={item.product_id} item={item} removeHandler={removeHandler}/>
+                    <CartItem key={item.product_id} p_img={item.product_img} p_id={item.product_id} p_name={item.product_name} p_price={item.product_price} p_qty={item.qty} removeHandler={removeHandler}/>
                 ))       
                     
                 }

@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Router from 'next/router';
 import { CartItemState } from '../../context/CartContext';
 
-function CartItem({item, removeHandler}) {
+function CartItem({p_img, p_id, p_name, p_price, p_qty, removeHandler}) {
     const {cartdispatch} = CartItemState();
     const productrouter =(id) => [
         Router.push(`/products/${id}`)
@@ -15,7 +15,7 @@ function CartItem({item, removeHandler}) {
             <div className="grid grid-cols-3 bg-gray-100 rounded-xl p-2 my-2">
                 <div className="flex col-span-1 justify-center items-center">
                     <Image 
-                        src={item.product_img}
+                        src={p_img}
                         width={100}
                         height={100}
                         objectFit='contain'
@@ -23,13 +23,13 @@ function CartItem({item, removeHandler}) {
                 </div>
                 <div className="flex col-span-2">
                     <div className="mx-3">
-                        <p className="font-bold cursor-pointer " onClick={() => productrouter(item.product_id)}>{item.product_name}</p>
-                        <p>Price: ₹ {item.product_price}</p>
+                        <p className="font-bold cursor-pointer " onClick={() => productrouter(p_id)}>{p_name}</p>
+                        <p>Price: ₹ {item.p_price}</p>
                         <label>Qty:</label>
-                        <select name="qty" id="" className="mx-3" value={item.qty} onChange={(e) => cartdispatch({
+                        <select name="qty" id="" className="mx-3" value={p_qty} onChange={(e) => cartdispatch({
                             type:"CHANGE_CART_QTY",
                             payload:{
-                                id:item.product_id,
+                                id:p_id,
                                 qty: e.target.value,
                             }
                         })}>
@@ -39,7 +39,7 @@ function CartItem({item, removeHandler}) {
                                 ))}
                         </select>
                         
-                        <TrashIcon className="w-6 border-2 border-red-800 hover:border-black rounded-md hover:bg-red-500 hover:text-white m-2" onClick={() => removeHandler(item.product_id)}/>
+                        <TrashIcon className="w-6 border-2 border-red-800 hover:border-black rounded-md hover:bg-red-500 hover:text-white m-2" onClick={() => removeHandler(item.p_id)}/>
                         
                     </div>
                 </div>
