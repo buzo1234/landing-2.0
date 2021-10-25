@@ -1,18 +1,20 @@
 import ProductIcon from "./ProductIcon"
 
-function Diwali() {
+function Diwali({prod}) {
     return (
-        <div className="flex w-full justify center items-center p-3 m-1  rounded-sm hover:bg-gray-100 ">
+        <div className="flex w-full justify center items-center px-3 m-1  rounded-sm hover:bg-gray-100 ">
             <div className="flex flex-col w-full">
                 <div className="flex">
-                    <p>Diyas:</p>
+                    <p className="m-2 text-lg font-bold">{prod[0]}:</p>
                 </div>
                 <div className="flex overflow-x-scroll">
-                    <ProductIcon/>
-                    <ProductIcon/>
-                    <ProductIcon/>
-                    <ProductIcon/>
-                    
+                    {prod.map((product, index) => {
+                        if(index !== 0){
+                            return(
+                                <ProductIcon p_id={product._id} p_img={product.productimg} p_name={product.productname} key={index}/>
+                            )
+                        }
+                    })} 
                 </div>
             </div>
         </div>

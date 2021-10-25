@@ -3,7 +3,6 @@ import Header from "../components/Header";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Banner from "../components/Banner";
 import Seller from "../components/Seller";
-import Link from "next/link";
 import {ShoppingCartIcon} from '@heroicons/react/outline'
 import { CartState } from "../../context/AppContext";
 import axios from "axios";
@@ -66,6 +65,7 @@ function product() {
         
         <div className="flex flex-col">
             <Header/>
+            <div className="max-w-4xl mx-auto">
             {loading ? (<h1>Loading...</h1>) : (<>
             <div className="flex flex-col justify-center">
                 <div className="flex justify-center items-center text-center font-bold mt-5 text-lg">
@@ -99,6 +99,7 @@ function product() {
             </div>
             
             </>)}
+            </div>
             <Footer/>
             
             

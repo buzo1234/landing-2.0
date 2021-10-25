@@ -8,6 +8,7 @@ module.exports = {
     extend: {
       colors:{
         porabay : '#2d9cdb',
+        offwhite : '#f5f5f5'
       },
     },
   },

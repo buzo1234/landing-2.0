@@ -71,7 +71,7 @@ function ProductsNear() {
                 responsive={responsive}
                 centerMode
                 slidesToSlide={1}
-                minimumTouchDrag={25}
+                minimumTouchDrag={5}
             >
                 {loading ? <h1 className="font-bold">Loading...</h1> :products.map((product) => {
                   return <ProdIcon {...product} key={product._id} />

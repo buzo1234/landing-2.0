@@ -10,6 +10,7 @@ function signup() {
                 <link rel="icon" href="/porabay-logo.jpg" />
             </Head>
             <Header/>
+            <div className="max-w-4xl mx-auto">
             <div className="flex flex-col justify-center items-center mt-10 max-w-xs md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto ">
                 <div className="flex flex-col justify-center items-center w-full">
                     <div className="relative justify-center items-center w-full">
@@ -44,6 +45,7 @@ function signup() {
             </div>
             <div className="flex justify-center items-center w-full mt-20 mb-20">
                 <p className="font-bold text-lg">Join this Incredible Community Now !!!</p>
+            </div>
             </div>
             <Footer/>
         </div>

@@ -3,7 +3,6 @@ import Header from './components/Header'
 import Link from 'next/link'
 import CartItem from './components/CartItem'
 import { CartItemState } from '../context/CartContext'
-import axios from 'axios'
 import { useEffect, useState } from 'react'
 
 const cartarea = () => {
@@ -40,8 +39,8 @@ const cartarea = () => {
                 
            <Header/>
            
-            
-           <Link href="/subcategories">
+            <div className="max-w-4xl mx-auto">
+           <Link href="/">
                 <div>
                     <p className="text-sm underline cursor-pointer hover:text-porabay m-4">&lt;--Continue Shopping</p>
                     
@@ -66,9 +65,11 @@ const cartarea = () => {
                     </div>
                </Link>
            </div>
+           </div>
            <Footer/>
            </>
            }
+           
         </div>
     )
 }

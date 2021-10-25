@@ -3,8 +3,8 @@ export const initialstate = {
     sellers: [],
     sellerdata: {},
     loading: false,
-    productdata : {}
-
+    productdata : {},
+    categorydata : []
 }
 
 export const AppReducer = (state, action) => {
