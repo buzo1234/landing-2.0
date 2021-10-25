@@ -13,7 +13,7 @@ function Diwali({prod}) {
         <div className="flex w-full justify center items-center px-3 m-1  rounded-sm hover:bg-gray-100 ">
             <div className="flex flex-col w-full">
                 <div className="flex">
-                    <p className="m-2 text-lg font-bold">{prod[0]}:</p>
+                    <p className="m-2 text-lg font-bold">{name}:</p>
                 </div>
                 <div className="flex overflow-x-scroll">
                     {prod ? prod.map((product, index) => {
