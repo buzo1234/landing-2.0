@@ -13,16 +13,17 @@ function Diwali({prod}) {
         <div className="flex w-full justify center items-center px-3 m-1  rounded-sm hover:bg-gray-100 ">
             <div className="flex flex-col w-full">
                 <div className="flex">
-                    <p className="m-2 text-lg font-bold">{name}:</p>
+                    <p className="m-2 text-lg font-bold">{prod[0]}:</p>
                 </div>
                 <div className="flex overflow-x-scroll">
-                    {prod.map((product, index) => {
+                    {prod ? prod.map((product, index) => {
                         if(index !== 0){
                             return(
                                 <ProductIcon p_id={product._id} p_img={product.productimg} p_name={product.productname} key={index}/>
                             )
                         }
-                    })} 
+                    }) : ""
+                    } 
                 </div>
             </div>
         </div>
