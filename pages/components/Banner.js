@@ -21,7 +21,9 @@ function Banner({productimg}) {
         <div className="relative mt-5 max-w-6xl mx-auto">
            
             <Carousel
-               
+                autoPlay
+                transitionTime={8000}
+                infiniteLoop={true}
                 showStatus={false}
                 showIndicators={true}
                 showThumbs={false}
