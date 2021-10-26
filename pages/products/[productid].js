@@ -11,6 +11,7 @@ import {useEffect, useState} from 'react';
 import Router from "next/router";
 import { CartItemState } from "../../context/CartContext";
 import React from "react";
+import Head from 'next/head';
 
 
 function product() {
@@ -64,6 +65,11 @@ function product() {
     return (
         
         <div className="flex flex-col">
+            
+            <Head>
+                <title>Porabay</title>
+                <link rel="icon" href="/porabay-logo.jpg" />
+            </Head>
             <Header/>
             <div className="max-w-4xl mx-auto">
             {loading ? (<h1>Loading...</h1>) : (<>

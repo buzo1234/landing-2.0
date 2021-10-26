@@ -4,6 +4,7 @@ import Link from 'next/link'
 import CartItem from './components/CartItem'
 import { CartItemState } from '../context/CartContext'
 import { useEffect, useState } from 'react'
+import Head from 'next/head';
 
 const cartarea = () => {
     const {cartstate, cartdispatch} = CartItemState();
@@ -34,6 +35,10 @@ const cartarea = () => {
 
     return (
         <div>
+            <Head>
+                <title>Porabay</title>
+                <link rel="icon" href="/porabay-logo.jpg" />
+            </Head>
            {loading ? <h1>Loading...</h1> : 
            <>
                 

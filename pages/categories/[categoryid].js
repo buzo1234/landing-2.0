@@ -5,6 +5,7 @@ import {useRouter} from 'next/router';
 import { CartState } from "../../context/AppContext";
 import {useEffect} from 'react';
 import axios from "axios";
+import Head from 'next/head';
 
 function subcategories() {
     const {state : {products, loading}, dispatch,} = CartState();
@@ -94,6 +95,10 @@ function subcategories() {
 
     return (
         <div> 
+            <Head>
+                <title>Porabay</title>
+                <link rel="icon" href="/porabay-logo.jpg" />
+            </Head>
             <Header/>
             <div className="max-w-4xl mx-auto">
             <div className="flex justify-between items-center overflow-x-scroll w-full  my-2 p-2">
