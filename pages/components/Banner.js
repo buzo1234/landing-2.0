@@ -23,7 +23,7 @@ function Banner({productimg}) {
             <Carousel
                 autoPlay
                 interval={8000}
-                transitionTime={1000}
+                transitionTime={300}
                 infiniteLoop={true}
                 showStatus={false}
                 showIndicators={true}
