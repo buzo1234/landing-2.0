@@ -6,9 +6,9 @@ import { CartItemState } from '../../context/CartContext';
 
 function CartItem({p_img, p_id, p_name, p_price, p_qty, removeHandler}) {
     const {cartdispatch} = CartItemState();
-    const productrouter =(id) => [
+    const productrouter =(id) => {
         Router.push(`/products/${id}`)
-    ]
+    }
     return (
         <div>
             <div className="grid grid-cols-3 bg-gray-100 rounded-xl p-2 my-2">

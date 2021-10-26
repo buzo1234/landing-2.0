@@ -53,11 +53,17 @@ function product() {
                 product_name: productdata.productname,
                 product_img : productdata.productimg[0],
                 product_price : productdata.productprice,
+                seller_name : productdata.sellerid.sellername,
+                seller_contact : productdata.sellerid.contact,
+                seller_address : productdata.sellerid.address,
+                seller_delivery : productdata.sellerid.delivery,
                 qty
             }
         })
         Router.push("/cartarea")
     }
+
+    console.log(productdata)
 
    var arr = [];
 

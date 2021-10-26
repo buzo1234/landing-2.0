@@ -25,15 +25,11 @@ function Header() {
                 <div className="flex items-center space-x-4">
                     <Link href="/cartarea">
                         <div className="relative w-full cursor-pointer">
-                            <div className="absolute -mt-2 ml-5 justify-center bg-red-400 items-center text-xs text-center rounded-full w-4">{subqty}</div>
-                            <ShoppingCartIcon className="w-8"/>
+                            <div className="absolute -mt-1 ml-7 justify-center bg-red-400 items-center text-xs text-center rounded-full w-4">{subqty}</div>
+                            <ShoppingCartIcon className="w-10 mr-4"/>
                         </div>
                     </Link>
-                    <Link href="/signup">
-                        <div className="border-solid items-center border-2 border-red-800 p-2 cursor-pointer text-sm md:text-lg lg:text-xl font-bold rounded-lg hover:underline ">
-                                <span className="mx-2">SignIn</span>
-                        </div>
-                    </Link>
+                    
                 </div>
                 
                 

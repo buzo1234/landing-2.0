@@ -31,6 +31,7 @@ const cartarea = () => {
     const getCartSubTotal = () => {
         return cartstate.cart.reduce((product_price, item) => item.product_price*Number(item.qty) + product_price, 0);
     }
+
     
 
     return (
@@ -65,9 +66,12 @@ const cartarea = () => {
            <div className="flex flex-col justify-center items-center m-4 mt-5">
                <p className="text-lg"><b>SubTotal: </b>₹ {getCartSubTotal()}</p>
                <Link href="/checkout">
-                    <div className="flex justify-center items-center m-4 py-3 px-10 text-porabay border-2 border-porabay rounded-3xl cursor-pointer hover:text-white hover:bg-porabay hover:underline hover:border-black font-bold text-lg">
-                        <p>Proceed To Checkout</p>
-                    </div>
+                   {cartstate.cart.length>0 ? (
+                        <div className="flex justify-center items-center m-4 py-3 px-10 text-porabay border-2 border-porabay rounded-3xl cursor-pointer hover:text-white hover:bg-porabay hover:underline hover:border-black font-bold text-lg">
+                            <p>Proceed To Checkout</p> 
+                        </div>
+                   ) : ""}
+                    
                </Link>
            </div>
            </div>
