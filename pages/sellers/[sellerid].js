@@ -46,6 +46,7 @@ function Sellerpage () {
             <Header/>
             {!loading&&(sellerdata[0]!==undefined) ? (
                 <>
+                <div className="max-w-4xl mx-auto">
                     <div className="flex flex-col justify-center items-center mt-5">
                         <Image
                             src={pic}
@@ -58,14 +59,14 @@ function Sellerpage () {
                     </div>
 
                     <p className="font-bold mt-5 ml-4">Products...</p>
-                    <div className="grid grid-cols-2">
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                         {sellerdata.map((seldata) => {
                             return(
                             <Sellerproducts p_name={seldata.productname} p_img={seldata.productimg[0] } p_price={seldata.productprice} p_id={seldata._id} key={seldata._id} />)
                         })}
                         
                     </div>
-                    
+                </div> 
                 </>
             ) : <h1>Loading...</h1>}
             
