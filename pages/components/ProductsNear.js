@@ -63,13 +63,14 @@ function ProductsNear() {
             <Carousel
                 swipeable={true}
                 infinite={true}
-                autoPlay={false}
+                autoPlay={true}
                 customTransition="transform 300ms ease-in-out"
                 removeArrowOnDeviceType={["desktop","tablet","mobile","superLargeDesktop"]}
                 responsive={responsive}
                 centerMode
-                slidesToSlide={1}
-                minimumTouchDrag={10}
+                slidesToSlide={2}
+                minimumTouchDrag={1}
+                autoPlaySpeed={4000}
             >
                 {loading ? <h1 className="font-bold">Loading...</h1> :products.map((product) => {
                   return <ProdIcon {...product} key={product._id} />

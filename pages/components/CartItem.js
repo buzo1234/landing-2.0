@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Router from 'next/router';
 import { CartItemState } from '../../context/CartContext';
 
-function CartItem({p_img, p_id, p_name, p_price, p_qty, removeHandler}) {
+function CartItem({p_img, p_id, p_name, p_price, p_qty, p_custom,  removeHandler}) {
     const {cartdispatch} = CartItemState();
     const productrouter =(id) => {
         Router.push(`/products/${id}`)
@@ -37,8 +37,16 @@ function CartItem({p_img, p_id, p_name, p_price, p_qty, removeHandler}) {
                                 </option>
                                 ))}
                         </select>
+                        {p_custom!=="" ? (
+                            <>
+                                <p>From you:</p>
+                                <p className="text-xs ml-2 mr-2">{p_custom}</p>
+                            </>
+                        ) : ""}
                         
-                        <TrashIcon className="w-6 border-2 border-red-800 hover:border-black rounded-md hover:bg-red-500 hover:text-white m-2" onClick={() => removeHandler(p_id)}/>
+                        <div className="flex justify-end">
+                            <TrashIcon className="w-6 border-2 border-red-800 hover:border-black rounded-md hover:bg-red-500 hover:text-white mt-2" onClick={() => removeHandler(p_id)}/>
+                        </div>
                         
                     </div>
                 </div>

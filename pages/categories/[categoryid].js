@@ -3,14 +3,18 @@ import Footer from "../components/Footer"
 import Header from "../components/Header"
 import {useRouter} from 'next/router';
 import { CartState } from "../../context/AppContext";
-import {useEffect} from 'react';
+import {useEffect, useState} from 'react';
 import axios from "axios";
 import Head from 'next/head';
+import MainCatRouter from "../components/MainCatRouter";
 
 function subcategories() {
-    const {state : {products, loading}, dispatch,} = CartState();
+    const {state : {products}, dispatch,} = CartState();
     const router = useRouter();
     const takencategoryid = router.query.categoryid;
+    const [maincategorydata, setMaincategorydata] = useState([]);
+    const [load, setload] = useState(true);
+    const [catname, setCatname] = useState("");
 
     useEffect(()=>{
         axios.get('https://karanmahesh.herokuapp.com/products')
@@ -25,6 +29,28 @@ function subcategories() {
         })
 
     },[]);
+
+    useEffect(() => {
+        axios.get('https://karanmahesh.herokuapp.com/categories')
+        .then(response => {
+            setMaincategorydata(response.data);
+        })
+        .catch((err) => {
+            console.log(err)
+        })
+    }, [])
+
+
+    useEffect(() => {
+        if(maincategorydata !== []){
+            setload(false);
+            maincategorydata.map((category_name) => {
+                if(category_name._id === takencategoryid){
+                    setCatname(category_name.categoryname)
+                }
+            })
+        }
+    },[router, maincategorydata])
 
     var categorydata = [];
     if(products){
@@ -93,6 +119,8 @@ function subcategories() {
 
     //console.log(categorydata)
 
+    
+
     return (
         <div> 
             <Head>
@@ -101,16 +129,14 @@ function subcategories() {
             </Head>
             <Header/>
             <div className="max-w-4xl mx-auto">
-            <div className="flex justify-between items-center overflow-x-scroll w-full  my-2 p-2">
-                
-                <div className="flex justify-center items-center p-2 mx-1 rounded-md cursor-pointer bg-porabay text-white font-bold min-w-max text-sm">Category 1</div>
-                <div className="flex justify-center items-center p-2 mx-1 rounded-md cursor-pointer bg-porabay text-white font-bold min-w-max text-sm">Category 1</div>
-                <div className="flex justify-center items-center p-2 mx-1 rounded-md cursor-pointer bg-porabay text-white font-bold min-w-max text-sm">Category 1</div>
-                <div className="flex justify-center items-center p-2 mx-1 rounded-md cursor-pointer bg-porabay text-white font-bold min-w-max text-sm">Category 1</div>
-                <div className="flex justify-center items-center p-2 mx-1 rounded-md cursor-pointer bg-porabay text-white font-bold min-w-max text-sm">Category 1</div>
+            <div className="flex items-center overflow-x-scroll w-full  my-2 p-2">
+                {!load ? (maincategorydata.map((maincat_data) => {
+                    return(
+                    <MainCatRouter cat_id={maincat_data._id} cat_name={maincat_data.categoryname}  />)
+                })) : <h1 className="text-lg font-bold">Loading....</h1>}
             </div>  
             <div className="flex p-3">
-                <p>Category Name</p>
+                {!load ? <p className="font-bold underline text-lg">{catname}</p> : <p>Loading...</p>}
             </div>
             <div className="flex flex-col justify-center items-center mt-2">
                {subcategoryproductdata.map((sub_data) => {

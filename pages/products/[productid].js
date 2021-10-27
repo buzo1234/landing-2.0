@@ -18,6 +18,7 @@ function product() {
     const {state : {productdata, loading}, dispatch,} = CartState();
     const { cartdispatch} = CartItemState();
     const [qty, setQty] = useState(1);
+    const [custom, setCustom] = useState("");
 
     const router = useRouter();
     const productid = router.query.productid;
@@ -56,17 +57,13 @@ function product() {
                 seller_name : productdata.sellerid.sellername,
                 seller_contact : productdata.sellerid.contact,
                 seller_address : productdata.sellerid.address,
-                seller_delivery : productdata.sellerid.delivery,
+                seller_delivery : productdata.sellerid.delivery,    
+                product_custom : custom,
                 qty
             }
         })
         Router.push("/cartarea")
     }
-
-    console.log(productdata)
-
-   var arr = [];
-
 
     return (
         
@@ -97,6 +94,10 @@ function product() {
                             ))}
                         </select>
                     </p>
+                    <p className="text-xs text-porabay italic text-center">Add Customizations or add a message to the creator...</p>
+                    <div className="flex justify-center">
+                        <textarea name="textarea" style={{width:300, height:100}} className="border-2 border-gray-300 rounded-lg mt-3 p-2" placeholder="Describe your need if any..." onChange={(e) => setCustom(e.target.value)}></textarea>
+                    </div>
                 </div>
             </div>
             

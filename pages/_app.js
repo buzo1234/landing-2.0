@@ -1,6 +1,7 @@
 import 'tailwindcss/tailwind.css'
 import { AppWrapper } from '../context/AppContext';
 import { CartWrapper } from '../context/CartContext'; 
+import { OrderWrapper } from '../context/OrderContext';
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -8,7 +9,9 @@ function MyApp({ Component, pageProps }) {
       
       <AppWrapper>
         <CartWrapper>
+          <OrderWrapper>
           <Component {...pageProps} />
+          </OrderWrapper>
         </CartWrapper>
       </AppWrapper>   
       

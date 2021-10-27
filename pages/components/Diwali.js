@@ -19,7 +19,7 @@ function Diwali({prod}) {
                     {prod ? prod.map((product, index) => {
                         if(index !== 0){
                             return(
-                                <ProductIcon p_id={product._id} p_img={product.productimg} p_name={product.productname} key={index}/>
+                                <ProductIcon p_id={product._id} p_img={product.productimg} p_name={product.productname} p_price={product.productprice} key={index}/>
                             )
                         }
                     }) : ""

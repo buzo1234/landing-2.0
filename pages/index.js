@@ -6,6 +6,7 @@ import Diwali from './components/Diwali'
 import Footer from './components/Footer'
 import Header from './components/Header'
 import ProductsNear from './components/ProductsNear'
+import SuggestionForm from './components/SuggestionForm'
 
 export default function Home() {
 
@@ -51,7 +52,7 @@ export default function Home() {
           <p className="mx-1 text-xl font-bold">Explore Categories...</p>
           <div className="grid grid-cols-12 md:grid-cols-5 lg:grid-cols-5 mt-2 gap-1 md:gap-2 lg:gap-2">   
             <div className="col-start-1 col-span-4 md:col-start-1 md:col-span-1 lg:col-start-1 lg:col-span-1">
-              <Category c_id={"617254fa6f5f28ebbae860fa"} c_name={"Art n Decor"} c_img={"/Diya.jpg"}/>
+              <Category c_id={"617254fa6f5f28ebbae860fa"} c_name={"Art & Decor"} c_img={"/Diya.jpg"}/>
             </div>
             <div className="col-end-9 col-span-4 md:col-end-3 md:col-span-1 lg:col-end-3 lg:col-span-1">
               <Category c_id={"6173f3ea3881deb7563e43a2"} c_name={"Cake"} c_img={"/Cake.jpg"}/>
@@ -79,8 +80,15 @@ export default function Home() {
             
           </div>
         </div>
-        
+        <p className="font-bold text-lg text-porabay  mt-4 text-center">Any Suggestions? or want to Connect?</p>
+        <p className=" text-xs text-center mb-3">We love blunt feedbacks</p>
+        <div className="flex ">
+          
+          <SuggestionForm/>
+
+        </div>
       </div>
+      
       <div>
           <Footer/>
         

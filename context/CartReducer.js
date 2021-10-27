@@ -30,10 +30,15 @@ export const CartReducer = (state, action) => {
                 cart:state.cart.filter(c => c.product_id !== action.payload)};
 
         case "CHANGE_CART_QTY" :
-            console.log("Entered bhai")
             return{
                 ...state,
                 cart:state.cart.filter(c => c.product_id === action.payload.id ? (c.qty = action.payload.qty) : c.qty)
+            }
+
+        case "EMPTY_CART":
+            return{
+                ...state,
+                cart:[]
             }
     
         default:

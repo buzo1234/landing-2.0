@@ -3,9 +3,9 @@ import { useState, useEffect } from 'react';
 import { CartState } from '../../context/AppContext';
 import Router from 'next/router';
 
-//Props required p_id, p_img, p_name, 
+//Props required p_id, p_img, p_name, p_price
 
-function ProductIcon({p_id, p_name, p_img}) {
+function ProductIcon({p_id, p_name, p_img, p_price}) {
     const {
         state: {products},
         
@@ -38,6 +38,7 @@ function ProductIcon({p_id, p_name, p_img}) {
                         />
                     </div>
                     <p className=" text-center line-clamp-1">{p_name}</p>
+                    <p className=" text-center line-clamp-1 font-bold">₹ {p_price}</p>
                 </div>
             
         </div>
