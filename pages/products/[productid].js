@@ -43,6 +43,7 @@ function product() {
     
     var name = ((productdata || {}).sellerid || {}).sellername;
     var pic = ((productdata || {}).sellerid || {}).profilepic;
+    var s_id = ((productdata || {}).sellerid || {})._id;
 
     if(pic==="") pic='/user.png'
 
@@ -83,7 +84,7 @@ function product() {
                 <React.Fragment key={productdata.productimg}>
                 <Banner productimg={productdata.productimg}/>
                 </React.Fragment>
-                <Seller name={name} pic={pic} key={productdata._id}/>
+                <Seller name={name} pic={pic} s_id={s_id} key={productdata._id}/>
                 <div className="flex flex-col justify-center w-full ">
                     <div className="flex justify-center items-center p-2 text-center"><p className="underline"><b>Price: </b>₹ {productdata.productprice}</p></div>
                     

@@ -1,7 +1,7 @@
 export const initialstate = {
     products : [],
     sellers: [],
-    sellerdata: {},
+    sellerdata: [],
     loading: false,
     productdata : {},
     categorydata : []
