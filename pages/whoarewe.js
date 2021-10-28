@@ -6,8 +6,8 @@ function whoarewe() {
     return (
         <div>
             <Head>
-                <title>Porabay</title>
-                <link rel="icon" href="/porabay-logo.jpg" />
+                <title>LocalKamaal</title>
+                <link rel="icon" href="" />
             </Head>
             <Header/>
             <div className="flex flex-col max-w-3xl mx-auto">

@@ -16,10 +16,8 @@ function Header() {
             <div className="flex items-center justify-between bg-white py-4 px-4 z-50 max-w-6xl mx-auto">
                 <Link href="/">
                     <div className="flex items-center cursor-pointer">
-                        <div>
-                            <img className="w-10 h-10 cursor-pointer" src="/porabay-logo.jpg" alt="logo" />
-                        </div>
-                        <div className="items-center px-1 text-2xl"><b>Porabay</b></div>
+                        
+                        <div className="font-serif items-center px-1 text-2xl"><b>LocalKamaal</b></div>
                     </div>
                 </Link>
                 <div className="flex items-center space-x-4">

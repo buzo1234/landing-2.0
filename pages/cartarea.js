@@ -37,8 +37,8 @@ const cartarea = () => {
     return (
         <div>
             <Head>
-                <title>Porabay</title>
-                <link rel="icon" href="/porabay-logo.jpg" />
+                <title>LocalKamaal</title>
+                <link rel="icon" href="" />
             </Head>
            {loading ? <h1>Loading...</h1> : 
            <>

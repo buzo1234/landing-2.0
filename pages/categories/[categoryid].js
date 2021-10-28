@@ -124,8 +124,8 @@ function subcategories() {
     return (
         <div> 
             <Head>
-                <title>Porabay</title>
-                <link rel="icon" href="/porabay-logo.jpg" />
+                <title>LocalKamaal</title>
+                <link rel="icon" href="" />
             </Head>
             <Header/>
             <div className="max-w-4xl mx-auto">

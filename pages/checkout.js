@@ -76,8 +76,8 @@ function checkout() {
             {!cartstate ? <h1 className="font-bold text-lg">Loading...</h1> : (
             <>
                 <Head>
-                <title>Porabay</title>
-                <link rel="icon" href="/porabay-logo.jpg" />
+                <title>LocalKamaal</title>
+                <link rel="icon" href="" />
                 </Head>
 
                 <div className="flex justify-center items-center mt-3">
@@ -134,8 +134,9 @@ function checkout() {
                         <div className="text-right mr-2">
                             <p className="font-bold underline">Sub Total:</p>
                             <p>Item Value : ₹ {getCartSubTotal()}</p>
-                            <p>Delivery : ₹ 50</p>
-                            <p className="underline"><b>Toal Amount : </b>₹ {getCartSubTotal() + Number(50)} </p>
+                            <p>Delivery : ₹ 0</p>
+                            <p className="underline"><b>Toal Amount : </b>₹ {getCartSubTotal() + Number(0)} </p>
+                            <p className="text-center mt-4 text-sm">Free Shipping! and Same Day Delivery!</p>
                         </div>
                         
                     </div>

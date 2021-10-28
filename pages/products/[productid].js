@@ -54,7 +54,7 @@ function product() {
                 product_id : productdata._id,
                 product_name: productdata.productname,
                 product_img : productdata.productimg[0],
-                product_price : productdata.productprice,
+                product_price : productdata.productprice+Number(30),
                 seller_name : productdata.sellerid.sellername,
                 seller_contact : productdata.sellerid.contact,
                 seller_address : productdata.sellerid.address,
@@ -71,8 +71,8 @@ function product() {
         <div className="flex flex-col">
             
             <Head>
-                <title>Porabay</title>
-                <link rel="icon" href="/porabay-logo.jpg" />
+                <title>LocalKamaal</title>
+                <link rel="icon" href="" />
             </Head>
             <Header/>
             <div className="max-w-4xl mx-auto">
@@ -86,16 +86,17 @@ function product() {
                 </React.Fragment>
                 <Seller name={name} pic={pic} s_id={s_id} key={productdata._id}/>
                 <div className="flex flex-col justify-center w-full ">
-                    <div className="flex justify-center items-center p-2 text-center"><p className="underline"><b>Price: </b>₹ {productdata.productprice}</p></div>
-                    
-                    <p className="text-center">Qty:
+                    <div className="flex justify-center items-center p-2 text-center"><p className="underline"><b>Price: </b>₹ {productdata.productprice + Number(30)}</p></div>
+                    <p className="text-center text-sm ">Free Shipping! + Same Day Delivery!</p>
+                    <p className="text-center mt-2">Qty:
                         <select value={qty} onChange={(e) => setQty(e.target.value)} className="border-2 border-porabay m-3 p-1 rounded-lg">
                             {[...Array(10).keys()].map((x) => (
                                 <option key={x+1} value={x+1}>{x+1}</option>
                             ))}
                         </select>
                     </p>
-                    <p className="text-xs text-porabay italic text-center">Add Customizations or add a message to the creator...</p>
+                    <p className="text-xs text-porabay italic text-center text-bold underline"><b>Add Customizations or add a message to the creator...</b></p>
+                    <p className="text-center text-xs italic ml-2 mr-2">PS: For customisation, just place your order. Once done we'll contact you for further details and if you've any customisation need then we'll assist you accordingly</p>
                     <div className="flex justify-center">
                         <textarea name="textarea" style={{width:300, height:100}} className="border-2 border-gray-300 rounded-lg mt-3 p-2" placeholder="Describe your need if any..." onChange={(e) => setCustom(e.target.value)}></textarea>
                     </div>

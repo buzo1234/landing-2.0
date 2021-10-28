@@ -41,15 +41,15 @@ export default function Home() {
   return (
     <div className="flex flex-col bg-offwhite">
       <Head>
-        <title>Porabay</title>
-        <link rel="icon" href="/porabay-logo.jpg" />
+        <title>LocalKamaal</title>
+        <link rel="icon" href="" />
       </Head>
       <Header/>
       <div className="flex flex-col max-w-4xl mx-auto w-full">
         <About/>
         <ProductsNear/>
         <div className="m-2 mt-3">
-          <p className="mx-1 text-xl font-bold">Explore Categories...</p>
+          <p className="mx-1 text-xl font-bold underline">Explore Categories...</p>
           <div className="grid grid-cols-12 md:grid-cols-5 lg:grid-cols-5 mt-2 gap-1 md:gap-2 lg:gap-2">   
             <div className="col-start-1 col-span-4 md:col-start-1 md:col-span-1 lg:col-start-1 lg:col-span-1">
               <Category c_id={"617254fa6f5f28ebbae860fa"} c_name={"Art & Decor"} c_img={"/Diya.jpg"}/>
@@ -70,7 +70,7 @@ export default function Home() {
           </div>
         </div>
         <div className="flex flex-col m-2">
-          <p className="mx-1 text-xl font-bold">Diwali Special...</p>
+          <p className="mx-1 text-xl font-bold underline">Diwali Special...</p>
           <div className="flex flex-col justify-center items-center mt-2">
             <Diwali prod={diyaproducts} key={diyaproducts}/>
             <Diwali prod={lanternproducts} key={lanternproducts}/>
@@ -88,6 +88,7 @@ export default function Home() {
 
         </div>
         <p className="italic text-center mx-auto">Service available in <b>Pune</b> City only</p>
+        <p className="italic text-center mx-auto text-sm mt-4 ml-3 mr-3">PS: We're in building phase so if you face any problem, just give us a call and we'll be happy to assist you :)</p>
       </div>
       
       <div>

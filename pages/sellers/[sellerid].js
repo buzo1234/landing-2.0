@@ -40,8 +40,8 @@ function Sellerpage () {
     return (
         <div className="bg-offwhite">
             <Head>
-                <title>Porabay</title>
-                <link rel="icon" href="/porabay-logo.jpg" />
+                <title>LocalKamaal</title>
+                <link rel="icon" href="" />
             </Head>
             <Header/>
             {!loading&&(sellerdata[0]!==undefined) ? (

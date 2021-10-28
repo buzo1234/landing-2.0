@@ -6,8 +6,8 @@ function support() {
     return (
         <div>
             <Head>
-                <title>Porabay</title>
-                <link rel="icon" href="/porabay-logo.jpg" />
+                <title>LocalKamaal</title>
+                <link rel="icon" href="" />
             </Head>
             <Header/>
                 <p className="text-xl text-center m-4">Please give us a call or write an E-mail</p>
