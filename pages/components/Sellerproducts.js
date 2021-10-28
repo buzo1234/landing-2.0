@@ -18,7 +18,7 @@ function Sellerproducts({p_name, p_img, p_price, p_id}) {
                     
                 />
                 <p className="line-clamp-1 text-lg">{p_name}</p>
-                <p>₹ {p_price + Number(30)}</p>
+                <p>₹ {p_price + Number(0.1 *p_price)}</p>
             </div>
         </div>
     )
