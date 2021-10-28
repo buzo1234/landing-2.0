@@ -54,7 +54,7 @@ function product() {
                 product_id : productdata._id,
                 product_name: productdata.productname,
                 product_img : productdata.productimg[0],
-                product_price : productdata.productprice+Number(30),
+                product_price : productdata.productprice+Number(0.1*productdata.productprice),
                 seller_name : productdata.sellerid.sellername,
                 seller_contact : productdata.sellerid.contact,
                 seller_address : productdata.sellerid.address,
@@ -86,7 +86,7 @@ function product() {
                 </React.Fragment>
                 <Seller name={name} pic={pic} s_id={s_id} key={productdata._id}/>
                 <div className="flex flex-col justify-center w-full ">
-                    <div className="flex justify-center items-center p-2 text-center"><p className="underline"><b>Price: </b>₹ {productdata.productprice + Number(30)}</p></div>
+                    <div className="flex justify-center items-center p-2 text-center"><p className="underline"><b>Price: </b>₹ {productdata.productprice + Number(0.1*productdata.productprice)}</p></div>
                     <p className="text-center text-sm ">Free Shipping! + Delivery within 2-3 days!</p>
                     <p className="text-center mt-2">Qty:
                         <select value={qty} onChange={(e) => setQty(e.target.value)} className="border-2 border-porabay m-3 p-1 rounded-lg">

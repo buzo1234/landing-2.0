@@ -38,7 +38,7 @@ function ProductIcon({p_id, p_name, p_img, p_price}) {
                         />
                     </div>
                     <p className=" text-center line-clamp-1">{p_name}</p>
-                    <p className=" text-center line-clamp-1 font-bold">₹ {p_price+Number(30)}</p>
+                    <p className=" text-center line-clamp-1 font-bold">₹ {p_price+Number(0.1*p_price)}</p>
                 </div>
             
         </div>
