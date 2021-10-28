@@ -20,7 +20,7 @@ function CartItem({p_img, p_id, p_name, p_price, p_qty, p_custom,  removeHandler
                         objectFit='contain'
                     />
                 </div>
-                <div className="flex col-span-2">
+                <div className="flex col-span-2 w-full">
                     <div className="mx-3">
                         <p className="font-bold cursor-pointer " onClick={() => productrouter(p_id)}>{p_name}</p>
                         <p>Price: ₹ {p_price}</p>
@@ -39,16 +39,18 @@ function CartItem({p_img, p_id, p_name, p_price, p_qty, p_custom,  removeHandler
                         </select>
                         {p_custom!=="" ? (
                             <>
+                            <div className="flex flex-col w-full">
                                 <p>From you:</p>
-                                <p className="text-xs ml-2 mr-2">{p_custom}</p>
+                                <p className="whitespace-pre-wrap text-xs ml-2 mr-2 overflow-x-scroll w-40 md:w-60 lg:w-80 xl:w-96">{p_custom}</p>
+                            </div>
                             </>
-                        ) : ""}
+                        ) : <p className="text-xs ml-2 mr-2">no customizations added</p>}
                         
-                        <div className="flex justify-end">
-                            <TrashIcon className="w-6 border-2 border-red-800 hover:border-black rounded-md hover:bg-red-500 hover:text-white mt-2" onClick={() => removeHandler(p_id)}/>
-                        </div>
+                            <TrashIcon className="w-6 h-6 border-2 border-red-800 hover:border-black rounded-md hover:bg-red-500 hover:text-white mt-2" onClick={() => removeHandler(p_id)}/>
                         
+                       
                     </div>
+                    
                 </div>
             </div>
         </div>
