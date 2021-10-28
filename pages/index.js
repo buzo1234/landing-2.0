@@ -80,13 +80,14 @@ export default function Home() {
             
           </div>
         </div>
-        <p className="font-bold text-lg text-porabay  mt-4 text-center">Any Suggestions? or want to Connect?</p>
-        <p className=" text-xs text-center mb-3">We love blunt feedbacks</p>
+        <p className="font-bold text-lg text-porabay  mt-4 text-center">Any Suggestions? or Feedback?</p>
+        <p className=" text-xs text-center mb-3">We would love to hear it from you</p>
         <div className="flex ">
           
           <SuggestionForm/>
 
         </div>
+        <p className="italic text-center mx-auto">Service available in <b>Pune</b> City only</p>
       </div>
       
       <div>

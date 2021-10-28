@@ -15,7 +15,7 @@ function whoarewe() {
                     <p>We're <b>xyz</b> , A one stop solution for all home-made products.</p>
                     <p>An e-commerce marketplace that connects home-based businesses with local as well as pan India customers.</p>
                     <br/>
-                    <p>Why prefer Home-based Businesses?</p>
+                    <p className="font-bold mb-2 ">Why prefer Home-based Businesses?</p>
                         <li>Quality Assurance</li>
                         <li>Vast Variety</li>
                         <li>Uniqueness</li>

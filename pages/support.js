@@ -12,7 +12,7 @@ function support() {
             <Header/>
                 <p className="text-xl text-center m-4">Please give us a call or write an E-mail</p>
                 <div className="flex flex-col justify-center items-center m-4 text-lg">
-                    <p className="font-bold underline">Mahesh Mohota</p>
+                    <p className="font-bold underline">Mahesh Mohata</p>
                     <p>9637572030</p>
                     <p>maheshmohata28@gmail.com</p>
                 </div>
