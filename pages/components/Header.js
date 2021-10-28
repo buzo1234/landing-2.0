@@ -17,7 +17,7 @@ function Header() {
                 <Link href="/">
                     <div className="flex items-center cursor-pointer">
                         
-                        <div className="font-serif items-center px-1 text-2xl"><b>LocalKamaal</b></div>
+                        <div className="font-serif items-center px-1 text-2xl"><b>Local&#x0915;&#x092E;&#x093E;&#x0932;</b></div>
                     </div>
                 </Link>
                 <div className="flex items-center space-x-4">

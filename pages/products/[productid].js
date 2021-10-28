@@ -87,7 +87,7 @@ function product() {
                 <Seller name={name} pic={pic} s_id={s_id} key={productdata._id}/>
                 <div className="flex flex-col justify-center w-full ">
                     <div className="flex justify-center items-center p-2 text-center"><p className="underline"><b>Price: </b>₹ {productdata.productprice + Number(30)}</p></div>
-                    <p className="text-center text-sm ">Free Shipping! + Same Day Delivery!</p>
+                    <p className="text-center text-sm ">Free Shipping! + Delivery within 2-3 days!</p>
                     <p className="text-center mt-2">Qty:
                         <select value={qty} onChange={(e) => setQty(e.target.value)} className="border-2 border-porabay m-3 p-1 rounded-lg">
                             {[...Array(10).keys()].map((x) => (
