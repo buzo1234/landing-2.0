@@ -12,6 +12,7 @@ import Router from "next/router";
 import { CartItemState } from "../../context/CartContext";
 import React from "react";
 import Head from 'next/head';
+import * as gtag from '../../lib/gtag';
 
 
 function product() {
@@ -44,10 +45,17 @@ function product() {
     var name = ((productdata || {}).sellerid || {}).sellername;
     var pic = ((productdata || {}).sellerid || {}).profilepic;
     var s_id = ((productdata || {}).sellerid || {})._id;
+    var cat_name = ((productdata || {}).categoryid || {}).subcategoryname;
 
     if(pic==="") pic='/user.png'
 
     const addToCartHandler = () => {
+        gtag.event({
+            action: "add_to_cart",
+            category: `${cat_name}`,
+            label: `${productdata.productname}`,
+            value: "Item added"
+        });
         cartdispatch({
             type:"ADD_TO_CART",
             payload:{
