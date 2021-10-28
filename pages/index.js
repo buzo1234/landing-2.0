@@ -81,7 +81,7 @@ export default function Home() {
           </div>
         </div>
         <p className="font-bold text-lg text-porabay  mt-4 text-center">Any Suggestions? or Feedback?</p>
-        <p className=" text-xs text-center mb-3">We would love to hear it from you</p>
+        <p className=" text-xs text-center mb-3">We would love to hear it from you...</p>
         <div className="flex ">
           
           <SuggestionForm/>
