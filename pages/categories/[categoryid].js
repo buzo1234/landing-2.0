@@ -129,7 +129,7 @@ function subcategories() {
             </Head>
             <Header/>
             <div className="max-w-4xl mx-auto">
-            <div className="flex items-center justify-evenly overflow-x-scroll w-full  my-2 p-2">
+            <div className="flex items-center justify-between overflow-x-scroll w-full  my-2 p-2">
                 {!load ? (maincategorydata.map((maincat_data) => {
                     return(
                     <MainCatRouter cat_id={maincat_data._id} cat_name={maincat_data.categoryname}  />)
