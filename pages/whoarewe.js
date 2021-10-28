@@ -12,7 +12,7 @@ function whoarewe() {
             <Header/>
             <div className="flex flex-col max-w-3xl mx-auto">
                 <div className="flex flex-col m-4 md:text-lg lg:text-xl">
-                    <p>We're <b>xyz</b> , A one stop solution for all home-made products.</p>
+                    <p>We're <b>LocalKamaal</b> , A one stop solution for all home-made products.</p>
                     <p>An e-commerce marketplace that connects home-based businesses with local as well as pan India customers.</p>
                     <br/>
                     <p className="font-bold mb-2 ">Why prefer Home-based Businesses?</p>
