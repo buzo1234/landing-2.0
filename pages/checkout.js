@@ -136,7 +136,7 @@ function checkout() {
                             <p>Item Value : ₹ {getCartSubTotal()}</p>
                             <p>Delivery : ₹ 0</p>
                             <p className="underline"><b>Toal Amount : </b>₹ {getCartSubTotal() + Number(0)} </p>
-                            <p className="text-center mt-4 text-sm">Free Shipping! Delivery within 2-3 days!</p>
+                            <p className="text-center mt-4 text-sm">Free Shipping! and Delivery within 2-3 days!</p>
                         </div>
                         
                     </div>
