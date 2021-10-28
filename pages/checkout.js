@@ -148,6 +148,7 @@ function checkout() {
                                 p_name={cartitem.product_name}
                                 p_price={cartitem.product_price}
                                 p_qty = {cartitem.qty}
+                                p_comment = {cartitem.product_custom}
                             />
                         )
                     })}

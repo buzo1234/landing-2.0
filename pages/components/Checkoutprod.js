@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Router from 'next/router';
 
-function Checkoutprod({p_id, p_img, p_name, p_price ,p_qty }) {
+function Checkoutprod({p_id, p_img, p_name, p_price ,p_qty, p_comment }) {
     const productrouter =(id) => {
         Router.push(`/products/${id}`)
     }
@@ -20,7 +20,14 @@ function Checkoutprod({p_id, p_img, p_name, p_price ,p_qty }) {
                             <div className="mx-3">
                                 <p className="font-bold cursor-pointer ">{p_name}</p>
                                 <p className="underline">Price: ₹ {p_price}</p>
-                                <p className="underline">Qty: {p_qty} </p>                        
+                                <p className="underline">Qty: {p_qty} </p>
+                                {p_comment === "" ? <p className="text-sm">no customizations added</p> : (
+                                    <>  
+                                        <p className="text-sm">From you:</p>
+                                        <p className="whitespace-pre-wrap text-xs ml-2 mr-2 overflow-x-scroll w-40 md:w-60 lg:w-80 xl:w-96">{p_comment}</p> 
+                                    </>
+                                )}
+                                                       
                             </div>
                         </div>
                     </div>

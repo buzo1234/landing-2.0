@@ -40,7 +40,7 @@ function CartItem({p_img, p_id, p_name, p_price, p_qty, p_custom,  removeHandler
                         {p_custom!=="" ? (
                             <>
                             <div className="flex flex-col w-full">
-                                <p>From you:</p>
+                                <p className="text-sm">From you:</p>
                                 <p className="whitespace-pre-wrap text-xs ml-2 mr-2 overflow-x-scroll w-40 md:w-60 lg:w-80 xl:w-96">{p_custom}</p>
                             </div>
                             </>
