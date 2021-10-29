@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import {ShoppingCartIcon} from '@heroicons/react/outline'
+import {ShoppingCartIcon, HomeIcon} from '@heroicons/react/outline'
 import { CartItemState } from '../../context/CartContext';
 import { useEffect, useState } from 'react';
 
@@ -21,6 +21,9 @@ function Header() {
                     </div>
                 </Link>
                 <div className="flex items-center space-x-4">
+                    <Link href="/">
+                        <HomeIcon className="w-12" />
+                    </Link>
                     <Link href="/cartarea">
                         <div className="relative w-full cursor-pointer">
                             <div className="absolute -mt-1 ml-7 justify-center bg-red-400 items-center text-xs text-center rounded-full w-4">{subqty}</div>

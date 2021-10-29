@@ -12,7 +12,7 @@ import axios from "axios";
 function checkout() {
 
     const {cartstate, cartdispatch} = CartItemState();
-    const {orderstate, orderdispatch} = OrderItemState();
+    const {orderstate:{loading}, orderdispatch} = OrderItemState();
 
     const [uname, setUname] = useState("");
     const [ucontact, setUcontact] = useState();
@@ -177,7 +177,7 @@ function checkout() {
                     {cartstate.cart.length !== 0 ? (<>
                     <div className="flex flex-col justify-center items-center mt-8">
                         {check ? <div className="text-red-600 text-center">Please enter correct details!</div> : ""}
-                        <button type="submit" className="border-2 border-porabay p-3 rounded-2xl text-lg font-bold bg-porabay/70 shadow-xl" onClick={() => confirmRouter()}>Confirm and Place Order</button>
+                        <button type="submit" className="border-2 border-porabay p-3 rounded-2xl text-lg font-bold bg-porabay/70 shadow-xl" onClick={() => confirmRouter()}>{loading? <p>Loading...</p> : <p>Confirm and Place Order</p>}</button>
                     </div>
                     </>) : ""}
                     
