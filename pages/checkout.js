@@ -31,7 +31,7 @@ function checkout() {
 
     const confirmRouter = () => {
 
-        if(uname==="" || ucontact==="" || uaddress===""  || uemail==="" ||upincode==="" ){
+        if(uname==="" || ucontact==="" || uaddress==="" || upincode==="" ){
             setCheck(true);
             return
         }
