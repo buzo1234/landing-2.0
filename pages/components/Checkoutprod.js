@@ -7,7 +7,7 @@ function Checkoutprod({p_id, p_img, p_name, p_price ,p_qty, p_comment }) {
     }
     return (
         <div>
-            <div className="grid grid-cols-3 bg-gray-100 rounded-xl p-2 my-2" >
+            <div className="grid grid-cols-3 bg-white rounded-2xl p-2 my-2" >
                         <div className="flex col-span-1 justify-center items-center">
                             <Image 
                                 src={p_img}

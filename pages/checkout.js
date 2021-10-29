@@ -101,41 +101,41 @@ function checkout() {
                             
                             <form action="" className="w-full">
                             <div className="relative justify-center items-center w-full">
-                                <div className="absolute text-xs justify-center items-center text-porabay bg-white ml-3 p-1 -mt-1">Name</div>
+                                <div className="absolute text-xs justify-center items-center text-porabay bg-white ml-3 p-1 -mt-1 rounded-xl  bg-gradient-to-b from-offwhite to-white via-offwhite"><p>Name <b className="text-red-700 text-sm">*</b></p></div>
                                 <input required type="text" placeholder="Enter Name" value={uname} onChange={(e) => setUname(e.target.value)} className="border-2 border-porabay my-2 p-2 rounded-md focus:border-black w-full" />
                             </div>
                             
                             <div className="relative justify-center items-center w-full">
-                                <div className="absolute text-xs text-porabay bg-white ml-3 p-1 -mt-1">Contact</div>
+                                <div className="absolute text-xs text-porabay bg-white ml-3 p-1 -mt-1 rounded-xl  bg-gradient-to-b from-offwhite to-white via-offwhite"><p>Contact <b className="text-red-700 text-sm">*</b></p></div>
                                 <input required type="number" placeholder="Enter Contact no." value={ucontact} onChange={(e) => setUcontact(e.target.value)} className="border-2 border-porabay my-2 p-2 rounded-md focus:border-black w-full"  />
                                 
                             </div>
 
                             <div className="relative justify-center items-center w-full">
-                                <div className="absolute text-xs text-porabay bg-white ml-3 p-1 -mt-1">Email Address</div>
+                                <div className="absolute text-xs text-porabay bg-white ml-3 p-1 -mt-1 rounded-xl  bg-gradient-to-b from-offwhite to-white via-offwhite">Email Address</div>
                                 <input  type="email" placeholder="Enter Email Address" value={uemail} onChange={(e) => setUemail(e.target.value)} className="border-2 border-porabay my-2 p-2 rounded-md focus:border-black w-full" />
                                 
                             </div>  
         
-                            <div className="relative justify-center items-center w-full">
-                                <div className="absolute text-xs text-porabay bg-white ml-3 p-1 -mt-1">Address Line 1</div>
+                            <div className="relative justify-center items-center w-full ">
+                                <div className="absolute text-xs text-porabay ml-3 p-1 -mt-1 rounded-xl bg-gradient-to-b from-offwhite to-white via-offwhite"><p>Address Line 1 <b className="text-red-700 text-sm">*</b></p></div>
                                 <input required type="text" placeholder="Enter delivery address" value={uaddress} onChange={(e) => setUaddress(e.target.value)} className="border-2 border-porabay my-2 p-2 rounded-md focus:border-black w-full" />
                                 
                             </div>  
 
                             <div className="relative justify-center items-center w-full">
-                                <div className="absolute text-xs text-porabay bg-white ml-3 p-1 -mt-1">Address Line 2</div>
+                                <div className="absolute text-xs text-porabay bg-white ml-3 p-1 -mt-1 rounded-xl  bg-gradient-to-b from-offwhite to-white via-offwhite">Address Line 2</div>
                                 <input type="text" placeholder="(optional)" value={uaddress2} onChange={(e) => setUaddress2(e.target.value)} className="border-2 border-porabay my-2 p-2 rounded-md focus:border-black w-full" />
                                 
                             </div> 
                             <div className="flex gap-4">
                                 <div className="flex-1 relative justify-center items-center w-full">
-                                    <div className="absolute text-xs text-porabay bg-white ml-3 p-1 -mt-1">Town/City</div>
+                                    <div className="absolute text-xs text-porabay bg-white ml-3 p-1 -mt-1 rounded-xl  bg-gradient-to-b from-offwhite to-white via-offwhite">Town/City</div>
                                     <input required type="text" placeholder="Enter Delivery Address" value="Pune" className="border-2 border-porabay my-2 p-2 rounded-md focus:border-black w-full" />
                                     
                                 </div> 
                                 <div className="flex-1 relative justify-center items-center w-full">
-                                    <div className="absolute text-xs text-porabay bg-white ml-3 p-1 -mt-1">Pincode</div>
+                                    <div className="absolute text-xs text-porabay bg-white ml-3 p-1 -mt-1 rounded-xl  bg-gradient-to-b from-offwhite to-white via-offwhite"><p>Pincode <b className="text-red-700 text-sm">*</b></p></div>
                                     <input required type="number" placeholder="Enter Pincode" value={upincode} onChange={(e) => setUpincode(e.target.value)} className="border-2 border-porabay my-2 p-2 rounded-md focus:border-black w-full" />
                                     
                                 </div>
