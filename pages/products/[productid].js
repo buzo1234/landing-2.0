@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Banner from "../components/Banner";
 import Seller from "../components/Seller";
-import {ShoppingCartIcon} from '@heroicons/react/outline'
+import {ShoppingCartIcon} from '@heroicons/react/solid'
 import { CartState } from "../../context/AppContext";
 import axios from "axios";
 import {useRouter} from 'next/router';
@@ -76,7 +76,7 @@ function product() {
 
     return (
         
-        <div className="flex flex-col">
+        <div className="flex flex-col bg-offwhite">
             
             <Head>
                 <title>LocalKamaal</title>
@@ -114,7 +114,7 @@ function product() {
            
             <div className="flex justify-center items-center">
             
-                <div className="flex justify-center items-center m-4 py-3 px-10 text-porabay border-2 border-porabay rounded-3xl cursor-pointer w-full hover:text-white hover:bg-porabay hover:underline font-bold text-lg" onClick={addToCartHandler}>
+                <div className="flex justify-center items-center m-4 py-3 px-10 text-porabay border-2 border-porabay rounded-3xl cursor-pointer w-full hover:text-white hover:bg-porabay hover:underline font-bold text-lg bg-white" onClick={addToCartHandler}>
                     
                     <p className="mr-3">Add to Cart</p>
                     <ShoppingCartIcon className="w-6"/>

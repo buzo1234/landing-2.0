@@ -59,7 +59,7 @@ function Sellerpage () {
                     </div>
 
                     <p className="font-bold mt-5 ml-4">Products...</p>
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 ">
                         {sellerdata.map((seldata) => {
                             return(
                             <Sellerproducts p_name={seldata.productname} p_img={seldata.productimg[0] } p_price={seldata.productprice} p_id={seldata._id} key={seldata._id} />)

@@ -18,6 +18,8 @@ function checkout() {
     const [ucontact, setUcontact] = useState();
     const [uemail, setUemail] = useState("");
     const [uaddress, setUaddress] = useState("");
+    const [uaddress2, setUaddress2] = useState("");
+    const [upincode, setUpincode] = useState();
 
     const [status, setStatus] = useState(false);
     const [check, setCheck] = useState(false);
@@ -29,7 +31,7 @@ function checkout() {
 
     const confirmRouter = () => {
 
-        if(uname==="" || ucontact==="" || uaddress===""  || uemail===""  ){
+        if(uname==="" || ucontact==="" || uaddress===""  || uemail==="" ||upincode==="" ){
             setCheck(true);
             return
         }
@@ -38,7 +40,7 @@ function checkout() {
         const order = {
             username: uname,
             usercontact: ucontact,
-            useraddress: uaddress,
+            useraddress: uaddress+", "+uaddress2+", Pin: "+upincode,
             useremail: uemail,
             cartitems: cartstate.cart,
 
@@ -72,7 +74,7 @@ function checkout() {
     }
 
     return (
-        <div><Header/>
+        <div className="bg-offwhite"><Header/>
             {!cartstate ? <h1 className="font-bold text-lg">Loading...</h1> : (
             <>
                 <Head>
@@ -109,17 +111,36 @@ function checkout() {
                                 
                             </div>
 
-                            <div className="arelative justify-center items-center w-full">
+                            <div className="relative justify-center items-center w-full">
                                 <div className="absolute text-xs text-porabay bg-white ml-3 p-1 -mt-1">Email Address</div>
                                 <input  type="email" placeholder="Enter Email Address" value={uemail} onChange={(e) => setUemail(e.target.value)} className="border-2 border-porabay my-2 p-2 rounded-md focus:border-black w-full" />
                                 
                             </div>  
         
-                            <div className="arelative justify-center items-center w-full">
-                                <div className="absolute text-xs text-porabay bg-white ml-3 p-1 -mt-1">Complete Address</div>
-                                <input required type="text" placeholder="Enter Delivery Address" value={uaddress} onChange={(e) => setUaddress(e.target.value)} className="border-2 border-porabay my-2 p-2 rounded-md focus:border-black w-full" />
+                            <div className="relative justify-center items-center w-full">
+                                <div className="absolute text-xs text-porabay bg-white ml-3 p-1 -mt-1">Address Line 1</div>
+                                <input required type="text" placeholder="Enter delivery address" value={uaddress} onChange={(e) => setUaddress(e.target.value)} className="border-2 border-porabay my-2 p-2 rounded-md focus:border-black w-full" />
                                 
-                            </div>   
+                            </div>  
+
+                            <div className="relative justify-center items-center w-full">
+                                <div className="absolute text-xs text-porabay bg-white ml-3 p-1 -mt-1">Address Line 2</div>
+                                <input type="text" placeholder="(optional)" value={uaddress2} onChange={(e) => setUaddress2(e.target.value)} className="border-2 border-porabay my-2 p-2 rounded-md focus:border-black w-full" />
+                                
+                            </div> 
+                            <div className="flex gap-4">
+                                <div className="flex-1 relative justify-center items-center w-full">
+                                    <div className="absolute text-xs text-porabay bg-white ml-3 p-1 -mt-1">Town/City</div>
+                                    <input required type="text" placeholder="Enter Delivery Address" value="Pune" className="border-2 border-porabay my-2 p-2 rounded-md focus:border-black w-full" />
+                                    
+                                </div> 
+                                <div className="flex-1 relative justify-center items-center w-full">
+                                    <div className="absolute text-xs text-porabay bg-white ml-3 p-1 -mt-1">Pincode</div>
+                                    <input required type="number" placeholder="Enter Pincode" value={upincode} onChange={(e) => setUpincode(e.target.value)} className="border-2 border-porabay my-2 p-2 rounded-md focus:border-black w-full" />
+                                    
+                                </div>
+                            </div>
+                              
                             </form>            
                         </div>
                        

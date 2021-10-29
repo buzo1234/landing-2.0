@@ -50,7 +50,7 @@ function SuggestionForm() {
             <textarea required type="text" style={{height:115}} placeholder="Enter Note" value={comment} onChange={(e) => setComment(e.target.value)} className="border-2 border-porabay my-2 p-2 rounded-md focus:border-black w-full"></textarea>
             {check ?  <p className="text-center text-red-500">Please Enter the Details</p>: ""}
             {done ? <p className="text-center text-green-500">Thank you for submitting the form :)</p> : ""}                    
-            <button type="submit" className="flex justify-center items-center m-4 py-3 px-10 text-porabay border-2 border-porabay rounded-3xl cursor-pointer hover:text-white hover:bg-porabay hover:underline hover:border-black font-bold text-lg" onClick={() => submithandler()}>Submit</button>
+            <button type="submit" className="flex justify-center items-center m-4 py-3 px-10 text-porabay border-2 border-porabay rounded-3xl cursor-pointer hover:text-white hover:bg-porabay hover:underline hover:border-black font-bold text-lg bg-white" onClick={() => submithandler()}>Submit</button>
        
         </div>
     )

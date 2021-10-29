@@ -122,7 +122,7 @@ function subcategories() {
     
 
     return (
-        <div> 
+        <div className="bg-offwhite"> 
             <Head>
                 <title>LocalKamaal</title>
                 <link rel="icon" href="" />
