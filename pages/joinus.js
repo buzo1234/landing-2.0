@@ -8,7 +8,7 @@ function joinus() {
         <div className="bg-offwhite">
             <Head>
                 <title>LocalKamaal</title>
-                <link rel="icon" href="" />
+                <link rel="icon" href="/localkamaal.jpg" />
             </Head>
             <Header/>
             <div className="flex flex-col max-w-4xl mx-auto">

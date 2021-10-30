@@ -22,7 +22,7 @@ function Header() {
                 </Link>
                 <div className="flex items-center justify-center">
                     <Link href="/">
-                        <HomeIcon className="w-12" />
+                        <HomeIcon className="w-12 cursor-pointer" />
                     </Link>
                     <Link href="/cartarea">
                         <div className="relative w-full cursor-pointer ">

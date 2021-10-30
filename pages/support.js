@@ -7,7 +7,7 @@ function support() {
         <div>
             <Head>
                 <title>LocalKamaal</title>
-                <link rel="icon" href="" />
+                <link rel="icon" href="/localkamaal.jpg" />
             </Head>
             <Header/>
                 <p className="text-xl text-center m-4">Please give us a call or write an E-mail</p>

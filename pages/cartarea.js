@@ -38,7 +38,7 @@ const cartarea = () => {
         <div>
             <Head>
                 <title>LocalKamaal</title>
-                <link rel="icon" href="" />
+                <link rel="icon" href="/localkamaal.jpg" />
             </Head>
            {loading ? <h1>Loading...</h1> : 
            <>

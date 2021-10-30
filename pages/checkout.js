@@ -79,7 +79,7 @@ function checkout() {
             <>
                 <Head>
                 <title>LocalKamaal</title>
-                <link rel="icon" href="" />
+                <link rel="icon" href="/localkamaal.jpg" />
                 </Head>
 
                 <div className="flex justify-center items-center mt-3">

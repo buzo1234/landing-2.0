@@ -40,8 +40,8 @@ function Sellerpage () {
     return (
         <div className="bg-offwhite">
             <Head>
-                <title>LocalKamaal</title>
-                <link rel="icon" href="" />
+                <title>{name} | LocalKamaal</title>
+                <link rel="icon" href="/localkamaal.jpg" />
             </Head>
             <Header/>
             {!loading&&(sellerdata[0]!==undefined) ? (

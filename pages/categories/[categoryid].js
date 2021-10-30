@@ -124,8 +124,8 @@ function subcategories() {
     return (
         <div className="bg-offwhite"> 
             <Head>
-                <title>LocalKamaal</title>
-                <link rel="icon" href="" />
+                <title>LocalKamaal | {!load ? catname : ''}</title>
+                <link rel="icon" href="/localkamaal.jpg" />
             </Head>
             <Header/>
             <div className="max-w-4xl mx-auto">

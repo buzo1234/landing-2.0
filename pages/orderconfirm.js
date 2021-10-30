@@ -7,7 +7,7 @@ function orderconfirm() {
         <div>
             <Head>
                 <title>LocalKamaal</title>
-                <link rel="icon" href="" />
+                <link rel="icon" href="/localkamaal.jpg" />
             </Head>
             <Header/>
             Order Confirmed !!!

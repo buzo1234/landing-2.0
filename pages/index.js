@@ -42,13 +42,16 @@ export default function Home() {
     <div className="flex flex-col bg-offwhite">
       <Head>
         <title>LocalKamaal</title>
-        <link rel="icon" href="" />
+        <link rel="icon" href="/localkamaal.jpg" />
       </Head>
       <Header/>
       <div className="flex flex-col max-w-4xl mx-auto w-full">
         <About/>
-        <ProductsNear/>
-        <div className="m-2 mt-3">
+        <div className="mb-3">
+          <ProductsNear/>
+
+        </div>
+        <div className="m-2 mt-3 mb-3">
           <p className="mx-1 text-xl font-bold underline">Explore Categories...</p>
           <div className="grid grid-cols-12 md:grid-cols-5 lg:grid-cols-5 mt-2 gap-1 md:gap-2 lg:gap-2">   
             <div className="col-start-1 col-span-4 md:col-start-1 md:col-span-1 lg:col-start-1 lg:col-span-1">

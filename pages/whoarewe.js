@@ -7,7 +7,7 @@ function whoarewe() {
         <div>
             <Head>
                 <title>LocalKamaal</title>
-                <link rel="icon" href="" />
+                <link rel="icon" href="/localkamaal.jpg" />
             </Head>
             <Header/>
             <div className="flex flex-col max-w-3xl mx-auto">
