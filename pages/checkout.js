@@ -9,7 +9,7 @@ import { useState } from "react";
 import { OrderItemState } from "../context/OrderContext";
 import axios from "axios";
 import {db, storage} from '../firebase';
-import { addDoc, collection } from "@firebase/firestore";
+import { addDoc, collection, serverTimestamp } from "@firebase/firestore";
 
 function checkout() {
 
@@ -50,7 +50,19 @@ function checkout() {
             ordercancelled:false
         }
 
-        const docRef = addDoc(collection(db, 'orders'),order)
+        const order_live = {
+            username: uname,
+            usercontact: ucontact,
+            useraddress: uaddress+", "+uaddress2+", Pin: "+upincode,
+            useremail: uemail,
+            cartitems: cartstate.cart,
+            orderread:false,
+            ordercompleted:false,
+            ordercancelled:false,
+            timestamp : serverTimestamp()
+        }
+
+        const docRef = addDoc(collection(db, 'orders'),order_live)
 
         orderdispatch({
             type:"ADD_TO_ORDER_REQUEST"
