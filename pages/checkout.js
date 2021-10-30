@@ -31,7 +31,7 @@ function checkout() {
         return cartstate.cart.reduce((product_price, item) => item.product_price*Number(item.qty) + product_price, 0);
     }
 
-    const confirmRouter = () => {
+    const confirmRouter = async () => {
 
         if(uname==="" || ucontact==="" || uaddress==="" || upincode==="" ){
             setCheck(true);
@@ -62,12 +62,12 @@ function checkout() {
             timestamp : serverTimestamp()
         }
 
-        const docRef = addDoc(collection(db, 'orders'),order_live)
+        const docRef = await addDoc(collection(db, 'orders'),order_live)
 
         orderdispatch({
             type:"ADD_TO_ORDER_REQUEST"
         })
-        axios.post('https://karanmahesh.herokuapp.com/orders/add', order)
+        await axios.post('https://karanmahesh.herokuapp.com/orders/add', order)
         .then(res => {
             orderdispatch({
                 type:"ADD_TO_ORDER",
