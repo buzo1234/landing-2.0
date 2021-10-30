@@ -8,6 +8,8 @@ import Router  from "next/router";
 import { useState } from "react";
 import { OrderItemState } from "../context/OrderContext";
 import axios from "axios";
+import {db, storage} from '../firebase';
+import { addDoc, collection } from "@firebase/firestore";
 
 function checkout() {
 
@@ -43,8 +45,13 @@ function checkout() {
             useraddress: uaddress+", "+uaddress2+", Pin: "+upincode,
             useremail: uemail,
             cartitems: cartstate.cart,
-
+            orderread:false,
+            ordercompleted:false,
+            ordercancelled:false
         }
+
+        const docRef = addDoc(collection(db, 'orders'),order)
+
         orderdispatch({
             type:"ADD_TO_ORDER_REQUEST"
         })
