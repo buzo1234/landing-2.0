@@ -1,23 +1,26 @@
 // Import the functions you need from the SDKs you need
-import { initializeApp, getApps, getApp } from "firebase/app";
-import {getFirestore} from "firebase/firestore";
-import {getStorage} from "firebase/storage";
+import { initializeApp, getApps, getApp } from 'firebase/app';
+import { getFirestore } from 'firebase/firestore';
+import { getStorage } from 'firebase/storage';
+
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyABerBiTwXyPQqQopjV_vFryr_Tq4Hme9I",
-  authDomain: "live-orders-abf8c.firebaseapp.com",
-  projectId: "live-orders-abf8c",
-  storageBucket: "live-orders-abf8c.appspot.com",
-  messagingSenderId: "795781714454",
-  appId: "1:795781714454:web:4de26535dae69a58d35b37"
+  apiKey: 'AIzaSyDRYlGmLNRQEBfovh7xVw3Jti1-em2U4wY',
+  authDomain: 'rakathon-b0e59.firebaseapp.com',
+  projectId: 'rakathon-b0e59',
+  storageBucket: 'rakathon-b0e59.appspot.com',
+  messagingSenderId: '248786530666',
+  appId: '1:248786530666:web:e6c6c38a32509485f3b513',
 };
 
 // Initialize Firebase
-const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
+const app = !getApps.length ? initializeApp(firebaseConfig) : getApp();
+
 const db = getFirestore();
+
 const storage = getStorage();
 
 export { app, db, storage };
