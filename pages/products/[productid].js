@@ -183,7 +183,7 @@ function product() {
           </>
         )}
 
-        <div className='bg-white px-4 mt-5'>
+        <div className='bg-white px-4 mt-5 w-full flex flex-col'>
           <p className='text-xl font-bold my-2'>Leave a review...</p>
           <input
             type='text'
