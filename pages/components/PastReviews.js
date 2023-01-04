@@ -15,12 +15,12 @@ const PastReviews = () => {
     );
   }, [db]);
   return (
-    <div className='mx-3'>
+    <div className='mx-3 flex w-full flex-col'>
       {revs !== []
         ? revs.map((rev, index) => (
             <>
               <Review key={rev.id} id={rev.id} review={rev.data().desc} />
-              <div className='bg-gray-200 h-[0.5px] flex w-screen'></div>
+              <div className='bg-gray-200 h-[0.5px] flex w-full'></div>
             </>
           ))
         : ''}
