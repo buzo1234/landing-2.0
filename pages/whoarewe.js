@@ -6,14 +6,14 @@ function whoarewe() {
   return (
     <div>
       <Head>
-        <title>LocalBazaar</title>
+        <title>Localकमाल</title>
         <link rel='icon' href='/localkamaal.jpg' />
       </Head>
       <Header />
       <div className='flex flex-col max-w-3xl mx-auto'>
         <div className='flex flex-col m-4 md:text-lg lg:text-xl'>
           <p>
-            We're <b>LocalBazaar</b> , A one stop solution for all local needs.
+            We're <b>Localकमाल</b> , A one stop solution for all local needs.
           </p>
           <p>
             An e-commerce marketplace that connects local businesses with local
