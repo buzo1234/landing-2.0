@@ -37,7 +37,7 @@ function product() {
       type: 'GET_PRODUCT_REQUEST',
     });
     axios
-      .get(`https://karanmahesh.herokuapp.com/products/${productid}`)
+      .get(`https://localkamaal-backend.vercel.app/products/${productid}`)
       .then((response) => {
         dispatch({
           type: 'GET_PRODUCT_DETAILS',
