@@ -19,7 +19,7 @@ function Sellerpage () {
         dispatch({
             type:"GET_SELLER_REQUEST"
         })
-        axios.get(`https://karanmahesh.herokuapp.com/products/seller/${sellerid}`)
+        axios.get(`https://localkamaal-backend.vercel.app/products/seller/${sellerid}`)
         .then(response => {
             dispatch({
                 type:"GET_SELLER_DETAILS",
