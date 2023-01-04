@@ -43,7 +43,7 @@ export default function Home() {
   return (
     <div className='flex flex-col bg-offwhite'>
       <Head>
-        <title>LocalBazaar</title>
+        <title>Localकमाल</title>
         <link rel='icon' href='/localkamaal.jpg' />
       </Head>
       <Header />
@@ -95,47 +95,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className='m-2 mt-3 mb-3'>
-          <p className='mx-1 text-xl font-bold underline'>
-            Explore nearby Services...
-          </p>
-          <div className='grid grid-cols-12 md:grid-cols-5 lg:grid-cols-5 mt-2 gap-1 md:gap-2 lg:gap-2'>
-            <div className='col-start-1 col-span-4 md:col-start-1 md:col-span-1 lg:col-start-1 lg:col-span-1'>
-              <ServiceCategory
-                url='https://media.istockphoto.com/vectors/electric-plug-icon-vector-illustration-vector-id1126163079?k=20&m=1126163079&s=612x612&w=0&h=tr48j-ji8JDkbLTmROuwJDx4kzzGyraElDmanxzgo2k='
-                name='Electrician'
-              />
-            </div>
-
-            <div className='col-end-9 col-span-4 md:col-end-3 md:col-span-1 lg:col-end-3 lg:col-span-1'>
-              <ServiceCategory
-                url='https://media.istockphoto.com/vectors/electric-plug-icon-vector-illustration-vector-id1126163079?k=20&m=1126163079&s=612x612&w=0&h=tr48j-ji8JDkbLTmROuwJDx4kzzGyraElDmanxzgo2k='
-                name='Plumber'
-              />
-            </div>
-
-            <div className='col-end-13 col-span-4 md:col-end-4 md:col-span-1 lg:col-end-4 lg:col-span-1'>
-              <ServiceCategory
-                url='https://media.istockphoto.com/vectors/electric-plug-icon-vector-illustration-vector-id1126163079?k=20&m=1126163079&s=612x612&w=0&h=tr48j-ji8JDkbLTmROuwJDx4kzzGyraElDmanxzgo2k='
-                name='Home Cook'
-              />
-            </div>
-
-            <div className='col-start-3 col-span-4 md:col-end-5 md:col-span-1 lg:col-end-5 lg:col-span-1'>
-              <ServiceCategory
-                url='https://media.istockphoto.com/vectors/electric-plug-icon-vector-illustration-vector-id1126163079?k=20&m=1126163079&s=612x612&w=0&h=tr48j-ji8JDkbLTmROuwJDx4kzzGyraElDmanxzgo2k='
-                name='Baby Sitter'
-              />
-            </div>
-
-            <div className='col-end-11 col-span-4 md:col-end-6 md:col-span-1 lg:col-end-6 lg:col-span-1'>
-              <ServiceCategory
-                url='https://media.istockphoto.com/vectors/electric-plug-icon-vector-illustration-vector-id1126163079?k=20&m=1126163079&s=612x612&w=0&h=tr48j-ji8JDkbLTmROuwJDx4kzzGyraElDmanxzgo2k='
-                name='Pest Control'
-              />
-            </div>
-          </div>
-        </div>
+        
 
         <div className='flex flex-col m-2'>
           <p className='mx-1 text-xl font-bold underline'>Best Sellers...</p>
