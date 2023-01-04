@@ -19,7 +19,7 @@ function Header() {
         <Link href='/'>
           <div className='flex items-center cursor-pointer'>
             <div className='font-serif items-center px-1 text-2xl'>
-              <b>LocalBazaar</b>
+              <b>Localकमाल</b>
             </div>
           </div>
         </Link>
