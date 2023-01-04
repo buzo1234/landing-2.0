@@ -23,7 +23,7 @@ function SuggestionForm() {
             usernote: comment,
 
         }
-        axios.post('https://karanmahesh.herokuapp.com/suggestions/add', suggestion)
+        axios.post('https://localkamaal-backend.vercel.app/suggestions/add', suggestion)
         .then(res => console.log(res.data))
         setCheck(false);
         setDone(true);
