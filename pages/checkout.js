@@ -68,7 +68,7 @@ function checkout() {
       type: 'ADD_TO_ORDER_REQUEST',
     });
     await axios
-      .post('https://karanmahesh.herokuapp.com/orders/add', order)
+      .post('https://localkamaal-backend.vercel.app/orders/add', order)
       .then((res) => {
         orderdispatch({
           type: 'ADD_TO_ORDER',
