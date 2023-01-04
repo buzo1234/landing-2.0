@@ -17,7 +17,7 @@ function subcategories() {
     const [catname, setCatname] = useState("");
 
     useEffect(()=>{
-        axios.get('https://karanmahesh.herokuapp.com/products')
+        axios.get('https://localkamaal-backend.vercel.app/products')
         .then(response => {
             dispatch({
                 type:"GET_PRODUCTS",
@@ -31,7 +31,7 @@ function subcategories() {
     },[]);
 
     useEffect(() => {
-        axios.get('https://karanmahesh.herokuapp.com/categories')
+        axios.get('https://localkamaal-backend.vercel.app/categories')
         .then(response => {
             setMaincategorydata(response.data);
         })
