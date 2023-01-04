@@ -16,7 +16,7 @@ function ProductsNear() {
       dispatch({
         type:"GET_PRODUCTS_REQUEST"
       });
-      axios.get('https://karanmahesh.herokuapp.com/products')
+      axios.get('https://localkamaal-backend.vercel.app/products')
       .then(response => {
         if(response.data.length > 0) {
           
